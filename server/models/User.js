@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+// TODO: mostly done, just need to optimize cart property when cart model (or schema) is fully structured
 const userSchema = new Schema({
     username: {
         type: String,
