@@ -9,3 +9,37 @@ Game {
 }
 
 */
+const { Schema, model } = require("mongoose");
+
+const gameSchema = new Schema({
+  image: {
+    type: String,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  summary: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+  genres: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Genre",
+    },
+  ],
+  rating: {
+    type: String,
+  },
+});
+
+const Game = model("Game", gameSchema);
+
+module.exports = Game;

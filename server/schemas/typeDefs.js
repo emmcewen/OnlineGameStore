@@ -12,8 +12,8 @@ const typeDefs = gql`
     type Game {
         gameId: ID!
         image: String
-        title: String
-        price: Int
+        title: String!
+        price: Float!
         summary: String
         description: String
         genres: [Genre]
@@ -34,8 +34,8 @@ const typeDefs = gql`
     input GameInput {
         gameId: ID!
         image: String
-        title: String
-        price: Int
+        title: String!
+        price: Float!
     }
 
     type Mutation {
