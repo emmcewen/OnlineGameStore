@@ -11,7 +11,7 @@ const resolvers = {
         gameId: async () => {
             return await Game.gameId.find();
         },
-        user: async (parent, args, context) => {
+        user: async (parent, context) => {
             if (context.user) {
                 const user = await User.findById(context.user._id).populate({
                     path: 'User.cart',
@@ -21,14 +21,14 @@ const resolvers = {
                 return user
             };
         },
-        genre: async (parent) => {
-            if (context.user) {
-                const user = await User.findById(context.user_id).populate({
-                    path: 'game.genres',
-                    populate: 'genres'
-                })
-            }
-        }
+        // genre: async (parent) => {
+        //     if (context.user) {
+        //         const user = await User.findById(context.user_id).populate({
+        //             path: 'game.genres',
+        //             populate: 'genres'
+        //         })
+        //     }
+        // }
     },
     Mutation: {
         addUser: async (parent, args) => {
@@ -37,32 +37,6 @@ const resolvers = {
 
             return { token, user };
         },
-        addOrder: async (parent, { products }, context) => {
-            console.log(context);
-            if (context.user) {
-                const cart = new Cart({ products });
-
-                await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
-
-                return cart;
-            }
-
-            throw new AuthenticationError('Not logged in');
-        },
-        updateUser: async (parent, args, context) => {
-            if (context.user) {
-                return await User.findByIdAndUpdate(context.user._id, args, { new: true });
-            }
-
-            throw new AuthenticationError('Not logged in');
-        },
-        // Update cart with new product values
-        // updateProduct: async (parent, { _id, quantity }) => {
-        //     const decrement = Math.abs(quantity) * -1;
-
-        //     return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
-        // },
-        // throw Auth error if user is not logged in
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
 
@@ -79,7 +53,31 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user };
-        }
+        },
+        addtoCart: async (parent, { products }, context) => {
+            console.log(context);
+            if (context.user) {
+                const cart = new Cart({ products });
+
+                await User.findByIdAndUpdate(context.user._id, { $push: { GameInput: gameId } });
+
+                return cart;
+            }
+
+            throw new AuthenticationError('Not logged in');
+        },
+        removeFromCart: async (parents, {game}, context) => {
+            console.log(context);
+            if (context.user) {
+                const cart = Cart({ game });
+
+                await User.findByIdAndDelete(context.user._id, { $pull: { Cart:gameId } });
+
+                return cart;
+            }
+
+            throw new AuthenticationError('Not logged in');
+        },
 
 
 
