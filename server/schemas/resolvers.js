@@ -17,9 +17,9 @@ const resolvers = {
                     path: 'User.cart',
                     populate: 'game'
                 });
-                user.game.sort((a, b) => b.purchaseDate - a.purchaseDate)
-
-            } return user;
+                user.game.sort((a, b) => b.purchaseDate - a.purchaseDate);
+                return user
+            };
         },
         genre: async (parent) => {
             if (context.user) {
@@ -81,7 +81,7 @@ const resolvers = {
             return { token, user };
         }
 
-    
+
 
         // Send game element to checkout and populate checkout
     }

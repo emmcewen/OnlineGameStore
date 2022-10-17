@@ -26,7 +26,7 @@ const products = [
   // More products...
 ]
 
-export default function Example() {
+export default function Cart() {
   const [open, setOpen] = useState(true)
 
   return (
@@ -153,4 +153,5 @@ export default function Example() {
       </Dialog>
     </Transition.Root>
   )
-}
+};
+
