@@ -11,7 +11,7 @@ const products = [
     price: '$60.00',
     quantity: 1,
     imageSrc: 'link to img src1',
-    imageAlt: 'Game descrition 2',
+    imageAlt: 'Game description 1',
   },
   {
     id: 2,
