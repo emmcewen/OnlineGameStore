@@ -5,24 +5,23 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const products = [
   {
     id: 1,
-    name: 'Throwback Hip Bag',
+    title: 'Title1',
     href: '#',
-    color: 'Salmon',
-    price: '$90.00',
+    genre: 'genre1',
+    price: '$60.00',
     quantity: 1,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+    imageSrc: 'link to img src1',
+    imageAlt: 'Game descrition 2',
   },
   {
     id: 2,
-    name: 'Medium Stuff Satchel',
+    title: 'Title2',
     href: '#',
-    color: 'Blue',
-    price: '$32.00',
+    genre2: 'genre2',
+    price: '$60.00',
     quantity: 1,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-    imageAlt:
-      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+    imageSrc: 'link to img src 2',
+    imageAlt: 'Game description 2',
   },
   // More products...
 ]
