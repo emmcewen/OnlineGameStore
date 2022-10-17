@@ -20,6 +20,13 @@ const typeDefs = gql`
         rating: String
     }
 
+    type Cart {
+        gameId: ID!
+        image: String
+        title: String!
+        price: Float!
+    }
+
     type Auth {
         token: ID!
         user: User
@@ -29,10 +36,13 @@ const typeDefs = gql`
         # query game id 
         # query user
         # query genre
+        me: User
+        genre: Genre
+        game: Game
     }
 
     input GameInput {
-        gameId: ID!
+        gameId: String!
         image: String
         title: String!
         price: Float!
@@ -41,7 +51,7 @@ const typeDefs = gql`
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        addToCart(GameInput): User
+        addToCart(body: GameInput): User
         removeFromCart(gameId: ID!): User
     }
 `
