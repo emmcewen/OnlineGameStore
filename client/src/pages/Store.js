@@ -6,6 +6,9 @@ import {
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
+import {FaRegThumbsUp} from 'react-icons/fa';
+import {FaRegThumbsDown} from 'react-icons/fa'
 
 export default function Store() {
   return (
@@ -28,10 +31,8 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$19.99</Typography>
-          <Typography variant="small" color="gray" className="flex gap-1">
-            <i className="fas fa-map-marker-alt fa-sm mt-[3px]" />
-            Barcelona, Spain
-          </Typography>
+          <Button><FaRegThumbsUp></FaRegThumbsUp></Button>
+          <Button><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
     </>
