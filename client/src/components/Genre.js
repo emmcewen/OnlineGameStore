@@ -114,7 +114,7 @@ export default function Genre() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                 RPG
+                  RPG
                 </a>
               )}
             </Menu.Item>

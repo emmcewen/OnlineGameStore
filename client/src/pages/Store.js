@@ -1,15 +1,15 @@
 import React from 'react';
 import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Typography,
-  } from "@material-tailwind/react";
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+} from "@material-tailwind/react";
 
 export default function Store() {
-    return (
-        <>
+  return (
+    <>
       <Card className="w-96">
         <CardHeader color="blue" className="relative h-56">
           <img
@@ -23,7 +23,7 @@ export default function Store() {
             Minecraft Dungeons
           </Typography>
           <Typography>
-          Fight your way through an exciting action-adventure game, inspired by classic dungeon crawlers and set in the Minecraft universe!
+            Fight your way through an exciting action-adventure game, inspired by classic dungeon crawlers and set in the Minecraft universe!
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
@@ -34,6 +34,6 @@ export default function Store() {
           </Typography>
         </CardFooter>
       </Card>
-        </>
-    )
+    </>
+  )
 }
