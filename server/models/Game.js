@@ -31,8 +31,7 @@ const gameSchema = new Schema({
   },
   genres: [
     {
-      type: Schema.Types.ObjectId,
-      ref: "Genre",
+      type: String
     },
   ],
   rating: {

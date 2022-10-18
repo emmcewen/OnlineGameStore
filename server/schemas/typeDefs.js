@@ -16,7 +16,7 @@ const typeDefs = gql`
         price: Float!
         summary: String
         description: String
-        genres: [Genre]
+        genres: [String]
         rating: String
     }
 
@@ -37,7 +37,6 @@ const typeDefs = gql`
         # query user
         # query genre
         me: User
-        genre: Genre
         game: Game
     }
 
@@ -55,3 +54,5 @@ const typeDefs = gql`
         removeFromCart(gameId: ID!): User
     }
 `
+
+module.exports = typeDefs;
