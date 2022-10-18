@@ -8,8 +8,16 @@ const resolvers = {
 
     // -- Query find with gameid, user , genre ,  
     Query: {
-        gameId: async () => {
+        game: async () => {
             return await Game.gameId.find();
+        },
+        genre: async (parent) => {
+            if (context.user) {
+                const user = await User.findById(context.user_id).populate({
+                    path: 'game.genres',
+                    populate: 'genres'
+                })
+            }
         },
         user: async (parent, context) => {
             if (context.user) {
@@ -21,15 +29,9 @@ const resolvers = {
                 return user
             };
         },
-        // genre: async (parent) => {
-        //     if (context.user) {
-        //         const user = await User.findById(context.user_id).populate({
-        //             path: 'game.genres',
-        //             populate: 'genres'
-        //         })
-        //     }
-        // }
+
     },
+    // Mutation to addUser, login, addtoCart, and removefromCart
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
@@ -66,12 +68,12 @@ const resolvers = {
 
             throw new AuthenticationError('Not logged in');
         },
-        removeFromCart: async (parents, {game}, context) => {
+        removeFromCart: async (parents, { game }, context) => {
             console.log(context);
             if (context.user) {
                 const cart = Cart({ game });
 
-                await User.findByIdAndDelete(context.user._id, { $pull: { Cart:gameId } });
+                await User.findByIdAndDelete(context.user._id, { $pull: { Cart: gameId } });
 
                 return cart;
             }
