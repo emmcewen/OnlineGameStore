@@ -3,4 +3,5 @@ body {
     background-image: url('https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1410.jpg?w=1480&t=st=1666061292~exp=1666061892~hmac=bd7eac292f39cd6e8b6b154c5bb10ad294e3099f9963ba4b495f22b506aae259');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
