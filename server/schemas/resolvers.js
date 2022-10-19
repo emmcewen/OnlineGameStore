@@ -1,6 +1,6 @@
 // const variables: Auth, User Models, Apollo
 const { AuthenticationError } = require('apollo-server-express');
-const { Cart, Game, Genre, User } = require('../models');
+const { Game, User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 // resolver const 
@@ -11,6 +11,7 @@ const resolvers = {
         game: async () => {
             return await Game.gameId.find();
         },
+        // TODO: ask about genre query and if we need populate
         genre: async (parent) => {
             if (context.user) {
                 const user = await User.findById(context.user_id).populate({
@@ -19,13 +20,9 @@ const resolvers = {
                 })
             }
         },
-        user: async (parent, context) => {
+        user: async (parent, args, context) => {
             if (context.user) {
-                const user = await User.findById(context.user._id).populate({
-                    path: 'User.cart',
-                    populate: 'game'
-                });
-                user.game.sort((a, b) => b.purchaseDate - a.purchaseDate);
+                const user = await User.findById(context.user._id);
                 return user
             };
         },
@@ -56,26 +53,30 @@ const resolvers = {
 
             return { token, user };
         },
-        addtoCart: async (parent, { products }, context) => {
+        addToCart: async (parent, { body }, context) => {
             console.log(context);
             if (context.user) {
-                const cart = new Cart({ products });
+                const updatedUser = await User.findOneAndUpdate(
+                    {_id: context.user._id}, 
+                    { $addToSet: { cart: body } },
+                    { new: true, runValidators: true }
+                    );
 
-                await User.findByIdAndUpdate(context.user._id, { $push: { GameInput: gameId } });
-
-                return cart;
+                return updatedUser;
             }
 
             throw new AuthenticationError('Not logged in');
         },
-        removeFromCart: async (parents, { game }, context) => {
+        removeFromCart: async (parent, { gameId }, context) => {
             console.log(context);
             if (context.user) {
-                const cart = Cart({ game });
+                const updatedUser = await User.findOneAndUpdate(
+                    {_id: context.user._id},
+                    {$pull: {cart: {gameId}}},
+                    {new:true}
+                );
 
-                await User.findByIdAndDelete(context.user._id, { $pull: { Cart: gameId } });
-
-                return cart;
+                return updatedUser;
             }
 
             throw new AuthenticationError('Not logged in');

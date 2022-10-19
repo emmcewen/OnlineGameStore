@@ -2,7 +2,7 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-const authMiddleware = require('./utils/auth');
+const { authMiddleware } = require('./utils/auth');
 
 // import typeDefs and resolvers from schemas, and db from connection.js
 const { typeDefs, resolvers } = require('./schemas');
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 
 // startApolloServer function to start apollo server and apply server middleware to app
 const startApolloServer = async (typeDefs, resolvers) => {
-    await startApolloServer.start();
+    await server.start();
     server.applyMiddleware({ app });
 
     db.once('open', () => {
