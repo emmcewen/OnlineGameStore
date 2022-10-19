@@ -36,8 +36,9 @@ const typeDefs = gql`
         # query game id 
         # query user
         # query genre
-        me: User
+        user: User
         game: Game
+        genre: User
     }
 
     input GameInput {
