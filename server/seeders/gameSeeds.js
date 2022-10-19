@@ -3,60 +3,6 @@
 const gameseeds =
     [
         {
-            title: "Minecraft Dungeons",
-            price: 19.99,
-            gameDescription: "Fight your way through an exciting action-adventure game, inspired by classic dungeon crawlers and set in the Minecraft universe!",
-        },
-
-        {
-            title: "Apex Legends",
-            price: "Free",
-            gameDescription: "Apex Legends is the award-winning, free-to-play Hero Shooter from Respawn Entertainment. Master an ever-growing roster of legendary characters with powerful abilities, and experience strategic squad play and innovative gameplay in the next evolution of Hero Shooter and Battle Royale.",
-        },
-
-        {
-            title: "Lost Ark",
-            price: "Free",
-            gameDescription: "Embark on an odyssey for the Lost Ark in a vast, vibrant world: explore new lands, seek out lost treasures, and test yourself in thrilling action combat in this action-packed free-to-play RPG.",
-        },
-
-        {
-            title: "Black Desert",
-            price: 9.99,
-            gameDescription: "Played by over 20 million Adventurers - Black Desert Online is an open-world, action MMORPG. Experience intense, action-packed combat, battle massive world bosses, fight alongside friends to siege and conquer castles, and train in professions such as fishing, trading, crafting, cooking, and more!",
-        },
-
-        {
-            title: "Grand Theft Auto V",
-            price: 14.99,
-            gameDescription: "Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.",
-        },
-
-        {
-            title: "The Sims 4",
-            price: 19.99,
-            gameDescription: "Play with life and discover the possibilities. Unleash your imagination and create a world of Sims that’s wholly unique. Explore and customize every detail from Sims to homes–and much more.",
-        },
-
-        {
-            title: "Stardew Valley",
-            price: 14.99,
-            gameDescription: "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
-        },
-
-        {
-            title: "Assassin's Creed Odyssey",
-            price: 11.99,
-            gameDescription: "Choose your fate in Assassin's Creed® Odyssey. From outcast to living legend, embark on an odyssey to uncover the secrets of your past and change the fate of Ancient Greece.",
-        },
-
-        {
-            title: "Call of Duty: Modern Warfare II",
-            price: 19.99,
-            gameDescription: "Call of Duty®: Modern Warfare® II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141.",
-        },
-
-        {
             title: "Demon Slayer",
             price: 35.99,
             gameDescription: "Become the Blade that Destroys Demons!",

@@ -14,7 +14,7 @@ import '../styles/style.css'
 export default function Store() {
   return (
     <>
-      <Card className="w-96 mt-60 mb-20 ml-10  bg-gold text-black" id='card1'>
+      <Card className="w-96 mt-60 mb-20 ml-10  bg-blue text-black" id='card1'>
         <CardHeader className="relative h-56">
           <img
             src="/img/MinecraftCard.jpg"
@@ -32,12 +32,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$19.99</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10 bg-gold text-black" id='card2'>
+      <Card className="w-96 mb-20 ml-10 bg-blue text-black" id='card2'>
         <CardHeader className="relative h-56">
           <img
             src="/img/ApexCard.jpg"
@@ -56,12 +56,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$Free</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-gold text-black" id='card3'>
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card3'>
         <CardHeader className="relative h-56">
           <img
             src="/img/LostArkCard.jpg"
@@ -79,12 +79,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$Free</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10 bg-gold text-black" id='card4'>
+      <Card className="w-96 mb-20 ml-10 bg-blue text-black" id='card4'>
         <CardHeader className="relative h-56">
           <img
             src="/img/BlackDesertCard.jpg"
@@ -102,12 +102,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$9.99</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-gold text-black" id='card5'>
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card5'>
         <CardHeader className="relative h-56">
           <img
             src="/img/GrandTheftCard.jpg"
@@ -125,12 +125,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$14.99</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-gold text-black" id='card6'>
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card6'>
         <CardHeader className="relative h-56">
           <img
             src="/img/SimsCard.jpg"
@@ -148,12 +148,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$19.99</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-gold text-black" id='card7'>
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card7'>
         <CardHeader className="relative h-56">
           <img
             src="/img/StardewCard.jpg"
@@ -171,12 +171,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$14.99</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-gold text-black" id='card8'>
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card8'>
         <CardHeader className="relative h-56">
           <img
             src="/img/AssassinsCard.jpg"
@@ -194,12 +194,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$11.99</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-gold text-black" id='card9'>
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card9'>
         <CardHeader className="relative h-56">
           <img
             src="/img/CODcard.jpg"
@@ -217,12 +217,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$19.99</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-gold text-black" id='card10'>
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card10'>
         <CardHeader className="relative h-56">
           <img
             src="/img/DemonCard.jpg"
@@ -240,8 +240,248 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$35.99</Typography>
-          <Button className='button ml-10'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5'><FaRegThumbsDown></FaRegThumbsDown></Button>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card11'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+      
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card12'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+      
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card13'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+      
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card14'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+      
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card15'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+      
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card16'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+      
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card17'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+      
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card18'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+      
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card19'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
+        </CardFooter>
+      </Card>
+
+      
+      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card20'>
+        <CardHeader className="relative h-56">
+          <img
+            src="/img/DemonCard.jpg"
+            alt="img-blur-shadow"
+            className="h-full w-full"
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h5" className="mb-2">
+            Demon Slayer
+          </Typography>
+          <Typography>
+          Become the Blade that Destroys Demons!
+          </Typography>
+        </CardBody>
+        <CardFooter divider className="flex items-center justify-between py-3">
+          <Typography variant="small">$35.99</Typography>
+          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
