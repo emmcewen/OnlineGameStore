@@ -15,7 +15,7 @@ export default function Store() {
   return (
     <>
     <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'> 
-      <Card className="w-96 mt-60 mb-20 ml-10 bg-blue text-black" id='card1'>
+      <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card1'>
         <CardHeader className="relative h-56">
           <img
             src="/img/MinecraftCard.jpg"
@@ -29,16 +29,19 @@ export default function Store() {
           </Typography>
           <Typography>
             Fight your way through an exciting action-adventure game, inspired by classic dungeon crawlers and set in the Minecraft universe!
+            <br />
+            <br />
+            <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$19.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10 mt-60 bg-blue text-black" id='card2'>
+      <Card className="w-96 mb-20 ml-14 mt-80 bg-blue bg-opacity-75 text-black" id='card2'>
         <CardHeader className="relative h-56">
           <img
             src="/img/ApexCard.jpg"
@@ -56,13 +59,13 @@ export default function Store() {
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
-          <Typography variant="small">$Free</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Typography variant="small">Free</Typography>
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10 mt-60 bg-blue text-black" id='card3'>
+      <Card className="w-96 mb-20 ml-14 mt-80 bg-blue bg-opacity-75 text-black" id='card3'>
         <CardHeader className="relative h-56">
           <img
             src="/img/LostArkCard.jpg"
@@ -79,13 +82,13 @@ export default function Store() {
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
-          <Typography variant="small">$Free</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Typography variant="small">Free</Typography>
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10 mt-60 bg-blue text-black" id='card4'>
+      <Card className="w-96 mb-20 ml-14 mt-80 bg-blue bg-opacity-75 text-black" id='card4'>
         <CardHeader className="relative h-56">
           <img
             src="/img/BlackDesertCard.jpg"
@@ -98,17 +101,17 @@ export default function Store() {
             Black Desert
           </Typography>
           <Typography>
-          Black Desert Online is an open-world, action MMORPG. Experience intense, action-packed combat, battle massive world bosses, fight alongside friends to siege and conquer castles, and train in professions such as fishing, trading, crafting, cooking, and more!
+         Experience intense, action-packed combat, battle massive world bosses, fight alongside friends to siege and conquer castles, and train in professions such as fishing, trading, crafting, cooking, and more!
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$9.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card5'>
+      <Card className="w-96 mb-20 ml-14  bg-blue bg-opacity-75 text-black" id='card5'>
         <CardHeader className="relative h-56">
           <img
             src="/img/GrandTheftCard.jpg"
@@ -126,12 +129,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$14.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card6'>
+      <Card className="w-96 mb-20 ml-14  bg-blue bg-opacity-75 text-black" id='card6'>
         <CardHeader className="relative h-56">
           <img
             src="/img/SimsCard.jpg"
@@ -145,16 +148,18 @@ export default function Store() {
           </Typography>
           <Typography>
           Play with life and discover the possibilities. Unleash your imagination and create a world of Sims that is wholly unique. Explore and customize every detail from Sims to homes and much more.
+          <br />
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$19.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card7'>
+      <Card className="w-96 mb-20 ml-14  bg-blue bg-opacity-75 text-black" id='card7'>
         <CardHeader className="relative h-56">
           <img
             src="/img/StardewCard.jpg"
@@ -172,12 +177,12 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$14.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card8'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card8'>
         <CardHeader className="relative h-56">
           <img
             src="/img/AssassinsCard.jpg"
@@ -191,16 +196,18 @@ export default function Store() {
           </Typography>
           <Typography>
           Choose your fate in Assassin's Creed® Odyssey. From outcast to living legend, embark on an odyssey to uncover the secrets of your past and change the fate of Ancient Greece.
+          <br />
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$11.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card9'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card9'>
         <CardHeader className="relative h-56">
           <img
             src="/img/CODcard.jpg"
@@ -214,16 +221,18 @@ export default function Store() {
           </Typography>
           <Typography>
           Call of Duty®: Modern Warfare® II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141.
+          <br />
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$19.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card10'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card10'>
         <CardHeader className="relative h-56">
           <img
             src="/img/DemonCard.jpg"
@@ -237,17 +246,21 @@ export default function Store() {
           </Typography>
           <Typography>
           Become the Blade that Destroys Demons!
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$35.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
-
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card11'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card11'>
         <CardHeader className="relative h-56">
           <img
             src="/img/FalloutCard.jpg"
@@ -265,13 +278,13 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$4.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card12'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card12'>
         <CardHeader className="relative h-56">
           <img
             src="/img/DestinyCard.jpg"
@@ -285,17 +298,20 @@ export default function Store() {
           </Typography>
           <Typography>
           Destiny 2 is an action MMO with a single evolving world that you and your friends can join anytime, anywhere, absolutely free.
+          <br />
+          <br />
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
-          <Typography variant="small">$Free</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Typography variant="small">Free</Typography>
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card13'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card13'>
         <CardHeader className="relative h-56">
           <img
             src="/img/TalesCard.jpg"
@@ -309,17 +325,18 @@ export default function Store() {
           </Typography>
           <Typography>
           300 years of tyranny. A mysterious mask. Lost pain and memories. Wield the Blazing Sword and join a mysterious, untouchable girl to fight your oppressors. Experience a tale of liberation, featuring characters with next-gen graphical expressiveness!
+
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$35.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card14'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card14'>
         <CardHeader className="relative h-56">
           <img
             src="/img/BeatSaberCard.jpg"
@@ -333,17 +350,20 @@ export default function Store() {
           </Typography>
           <Typography>
           Beat Saber is a VR rhythm game where you slash the beats of adrenaline-pumping music as they fly towards you, surrounded by a futuristic world.
+          <br />
+          <br />
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$29.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card15'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card15'>
         <CardHeader className="relative h-56">
           <img
             src="/img/FIFAcard.jpg"
@@ -361,13 +381,13 @@ export default function Store() {
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$69.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card16'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card16'>
         <CardHeader className="relative h-56">
           <img
             src="/img/MaddenCard.jpg"
@@ -380,18 +400,20 @@ export default function Store() {
             Madden NFL 23
           </Typography>
           <Typography>
-          Play your way into the history books. Control your impact with every decision in all-new ways. Call the shots in Franchise with free agency and trade logic updates, leave a legacy in Face of the Franchise: The League, and assemble the most powerful roster in all of Madden Ultimate Team™.
+          Play your way into the history books. Control your impact with every decision in all-new ways. Call the shots in Franchise with free agency and trade logic updates, leave a legacy in Face of the Franchise: The League.
+          <br />
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$38.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card17'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card17'>
         <CardHeader className="relative h-56">
           <img
             src="/img/FinalFantasyCard.jpg"
@@ -404,18 +426,18 @@ export default function Store() {
           Final Fantasy VII Remake Intergrade
           </Typography>
           <Typography>
-          Cloud Strife, an ex-SOLDIER operative, descends on the mako-powered city of Midgar. The world of the timeless classic FINAL FANTASY VII is reborn, using cutting-edge graphics technology, a new battle system and an additional adventure featuring Yuffie Kisaragi.
+          Cloud Strife, an ex-SOLDIER operative, descends on the mako-powered city of Midgar. The world of the timeless classic FINAL FANTASY VII is reborn using a new battle system and an additional adventure featuring Yuffie Kisaragi.
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$69.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card18'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card18'>
         <CardHeader className="relative h-56">
           <img
             src="/img/CounterStrikeCard.jpg"
@@ -429,17 +451,18 @@ export default function Store() {
           </Typography>
           <Typography>
           Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
-          <Typography variant="small">$Free</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Typography variant="small">Free</Typography>
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card19'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card19'>
         <CardHeader className="relative h-56">
           <img
             src="/img/DeadCard.jpg"
@@ -453,17 +476,20 @@ export default function Store() {
           </Typography>
           <Typography>
           Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape the Killer and avoid being caught and killed.
+          <br />
+          <br />
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$19.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card20'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-75 text-black" id='card20'>
         <CardHeader className="relative h-56">
           <img
             src="/img/EldenCard.jpg"
@@ -477,11 +503,15 @@ export default function Store() {
           </Typography>
           <Typography>
           THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.
+          <br />
+          <br />
+          <br />
+          <br />
           </Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$59.99</Typography>
-          <Button className='button ml-10 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
+          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
