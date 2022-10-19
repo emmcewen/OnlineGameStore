@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import Nav from './Nav';
 import Store from '../pages/Store';
 import SignIn from '../pages/SignIn'
+import SingleGame from '../pages/SingleGame'
 
 
 export default function GameContainer() {
@@ -13,6 +14,9 @@ export default function GameContainer() {
     }
     if (currentPage === 'SignIn') {
       return <SignIn />;
+    }
+    if (currentPage === 'SingleGame'){
+      return <SingleGame />;
     }
   };
 
