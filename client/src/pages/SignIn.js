@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { LockClosedIcon } from '@heroicons/react/20/solid'
 
 export default function Example() {
@@ -99,3 +100,5 @@ export default function Example() {
     </>
   )
 }
+=======
+>>>>>>> 817f555e18deb26c0979fc0f0500deda57eb0740
