@@ -14,7 +14,8 @@ import '../styles/style.css'
 export default function Store() {
   return (
     <>
-      <Card className="w-96 mt-60 mb-20 ml-10  bg-blue text-black" id='card1'>
+    <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'> 
+      <Card className="w-96 mt-60 mb-20 ml-10 bg-blue text-black" id='card1'>
         <CardHeader className="relative h-56">
           <img
             src="/img/MinecraftCard.jpg"
@@ -37,7 +38,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10 bg-blue text-black" id='card2'>
+      <Card className="w-96 mb-20 ml-10 mt-60 bg-blue text-black" id='card2'>
         <CardHeader className="relative h-56">
           <img
             src="/img/ApexCard.jpg"
@@ -61,7 +62,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10  bg-blue text-black" id='card3'>
+      <Card className="w-96 mb-20 ml-10 mt-60 bg-blue text-black" id='card3'>
         <CardHeader className="relative h-56">
           <img
             src="/img/LostArkCard.jpg"
@@ -84,7 +85,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-10 bg-blue text-black" id='card4'>
+      <Card className="w-96 mb-20 ml-10 mt-60 bg-blue text-black" id='card4'>
         <CardHeader className="relative h-56">
           <img
             src="/img/BlackDesertCard.jpg"
@@ -484,7 +485,7 @@ export default function Store() {
           <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
         </CardFooter>
       </Card>
-
+      </div>
     </>
   )
 }
