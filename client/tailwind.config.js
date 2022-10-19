@@ -3,11 +3,11 @@ module.exports = {
   content: [
     "./src/pages/Store.js",
     "./src/pages/SingleGame.js",
-    "./src/components/Nav.js",
+    "./src/pages/SignIn.js",
   ],
   theme: {
     extend: {},
   },
-  plugins: [ ...
+  plugins: [ 
     require('@tailwindcss/forms'),
   ]}
