@@ -15,7 +15,7 @@ export default function Store() {
   return (
     <>
     <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'> 
-      <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-black" id='card1'>
+      <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card1'>
         <CardHeader className="relative h-56">
           <img
             src="/img/MinecraftCard.jpg"

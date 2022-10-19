@@ -4,12 +4,13 @@ module.exports = withMT({
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      opacity: {
+        '60': '0.60'
+      },
       colors: {
-        'gold': '#e4a32f',
         'black': '#000000',
         'blue': '#0085AE',
-        'lightblue': "#62DAFF",
-        'purple': '#63397D',
+        'grey': '#d1d1d1',
       }
     },
   },

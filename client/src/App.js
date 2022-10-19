@@ -6,8 +6,8 @@ import background from './images/backgroundimg.jpg'
 export default function App() {
     return (
         <>
-        <div style={{backgroundImage: `url(${background})`}}></div>
-        <GameContainer /> 
+            <div style={{ backgroundImage: `url(${background})` }}></div>
+            <GameContainer />
         </>
     )
 }
