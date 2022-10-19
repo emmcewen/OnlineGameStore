@@ -1,11 +1,19 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/pages/Store.js",
-    "./src/pages/SingleGame.js",
-  ],
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      opacity: {
+        '60': '0.60'
+      },
+      colors: {
+        'black': '#000000',
+        'blue': '#0085AE',
+        'grey': '#d1d1d1',
+      }
+    },
   },
-  plugins: [],
-}
+  plugins: [
+  ], 
+});
