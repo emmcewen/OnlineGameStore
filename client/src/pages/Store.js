@@ -8,14 +8,14 @@ import {
 } from "@material-tailwind/react";
 import { Button } from "@material-tailwind/react";
 import {FaRegThumbsUp} from 'react-icons/fa';
-import {FaRegThumbsDown} from 'react-icons/fa'
-import '../styles/style.css'
+import {FaRegThumbsDown} from 'react-icons/fa';
+import '../styles/style.css';
 
 export default function Store() {
   return (
     <>
     <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'> 
-      <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card1'>
+      <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card1'>
         <CardHeader className="relative h-56">
           <img
             src="/img/MinecraftCard.jpg"
@@ -41,7 +41,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14 mt-80 bg-blue bg-opacity-60 text-white" id='card2'>
+      <Card className="w-96 mb-20 ml-14 mt-80 bg-blue bg-opacity-60 text-grey" id='card2'>
         <CardHeader className="relative h-56">
           <img
             src="/img/ApexCard.jpg"
@@ -65,7 +65,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14 mt-80 bg-blue bg-opacity-60 text-white" id='card3'>
+      <Card className="w-96 mb-20 ml-14 mt-80 bg-blue bg-opacity-60 text-grey" id='card3'>
         <CardHeader className="relative h-56">
           <img
             src="/img/LostArkCard.jpg"
@@ -88,7 +88,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14 mt-80 bg-blue bg-opacity-60 text-white" id='card4'>
+      <Card className="w-96 mb-20 ml-14 mt-80 bg-blue bg-opacity-60 text-grey" id='card4'>
         <CardHeader className="relative h-56">
           <img
             src="/img/BlackDesertCard.jpg"
@@ -111,7 +111,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14  bg-blue bg-opacity-60 text-white" id='card5'>
+      <Card className="w-96 mb-20 ml-14  bg-blue bg-opacity-60 text-grey" id='card5'>
         <CardHeader className="relative h-56">
           <img
             src="/img/GrandTheftCard.jpg"
@@ -134,7 +134,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14  bg-blue bg-opacity-60 text-white" id='card6'>
+      <Card className="w-96 mb-20 ml-14  bg-blue bg-opacity-60 text-grey" id='card6'>
         <CardHeader className="relative h-56">
           <img
             src="/img/SimsCard.jpg"
@@ -159,7 +159,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14  bg-blue bg-opacity-60 text-white" id='card7'>
+      <Card className="w-96 mb-20 ml-14  bg-blue bg-opacity-60 text-grey" id='card7'>
         <CardHeader className="relative h-56">
           <img
             src="/img/StardewCard.jpg"
@@ -182,7 +182,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card8'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card8'>
         <CardHeader className="relative h-56">
           <img
             src="/img/AssassinsCard.jpg"
@@ -207,7 +207,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card9'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card9'>
         <CardHeader className="relative h-56">
           <img
             src="/img/CODcard.jpg"
@@ -232,7 +232,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card10'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card10'>
         <CardHeader className="relative h-56">
           <img
             src="/img/DemonCard.jpg"
@@ -260,7 +260,7 @@ export default function Store() {
         </CardFooter>
       </Card>
 
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card11'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card11'>
         <CardHeader className="relative h-56">
           <img
             src="/img/FalloutCard.jpg"
@@ -284,7 +284,7 @@ export default function Store() {
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card12'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card12'>
         <CardHeader className="relative h-56">
           <img
             src="/img/DestinyCard.jpg"
@@ -311,7 +311,7 @@ export default function Store() {
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card13'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card13'>
         <CardHeader className="relative h-56">
           <img
             src="/img/TalesCard.jpg"
@@ -336,7 +336,7 @@ export default function Store() {
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card14'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card14'>
         <CardHeader className="relative h-56">
           <img
             src="/img/BeatSaberCard.jpg"
@@ -363,7 +363,7 @@ export default function Store() {
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card15'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card15'>
         <CardHeader className="relative h-56">
           <img
             src="/img/FIFAcard.jpg"
@@ -387,7 +387,7 @@ export default function Store() {
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card16'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card16'>
         <CardHeader className="relative h-56">
           <img
             src="/img/MaddenCard.jpg"
@@ -413,7 +413,7 @@ export default function Store() {
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card17'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card17'>
         <CardHeader className="relative h-56">
           <img
             src="/img/FinalFantasyCard.jpg"
@@ -437,7 +437,7 @@ export default function Store() {
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card18'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card18'>
         <CardHeader className="relative h-56">
           <img
             src="/img/CounterStrikeCard.jpg"
@@ -462,7 +462,7 @@ export default function Store() {
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card19'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card19'>
         <CardHeader className="relative h-56">
           <img
             src="/img/DeadCard.jpg"
@@ -489,7 +489,7 @@ export default function Store() {
       </Card>
 
       
-      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-white" id='card20'>
+      <Card className="w-96 mb-20 ml-14 bg-blue bg-opacity-60 text-grey" id='card20'>
         <CardHeader className="relative h-56">
           <img
             src="/img/EldenCard.jpg"

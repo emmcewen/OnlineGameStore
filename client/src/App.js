@@ -1,13 +1,34 @@
 import React from 'react';
-import GameContainer from './components/GameContainer';
-import "./output.css"
-import background from './images/backgroundimg.jpg'
+import "./output.css";
+import Store from './pages/Store';
+import SingleGame from './pages/SingleGame';
+import { Router, Routes, Route } from 'react-router-dom';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import Nav from './components/Nav';
+
+const client = new ApolloClient({
+    uri: '/graphql',
+    cache: new InMemoryCache(),
+});
 
 export default function App() {
     return (
-        <>
-            <div style={{ backgroundImage: `url(${background})` }}></div>
-            <GameContainer />
-        </>
+        <ApolloProvider client={client}>
+            <Router>
+                <div className='navbar'>
+                    <Nav />
+                    <div className='container'>
+                        <Routes>
+                            <Route path="/"
+                                element={<Store />}
+                            />
+                            <Route path="/games:gameId"
+                                element={<SingleGame />}
+                            />
+                        </Routes>
+                    </div>
+                </div>
+            </Router>
+        </ApolloProvider>
     )
 }
