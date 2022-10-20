@@ -7,7 +7,7 @@ import {
     Typography,
   } from "@material-tailwind/react";
 
-export function GameDescription() {
+export default function GameDescription() {
     return (
         <>
         <Card className="w-96">

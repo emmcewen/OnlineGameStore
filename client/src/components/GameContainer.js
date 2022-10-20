@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 // import Nav from './Nav';
 import Store from '../pages/Store';
-import SignIn from '../pages/SignIn'
+import SignupForm from '../components/SignupForm'
+import LoginForm from './LoginForm'
 import SingleGame from '../pages/SingleGame'
 
 
@@ -13,7 +14,10 @@ export default function GameContainer() {
       return <Store />;
     }
     if (currentPage === 'SignIn') {
-      return <SignIn />;
+      return <SignupForm />;
+    }
+    if (currentPage === 'SignIn') {
+      return <LoginForm />;
     }
     if (currentPage === 'SingleGame'){
       return <SingleGame />;
