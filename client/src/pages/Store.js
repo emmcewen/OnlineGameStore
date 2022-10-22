@@ -15,7 +15,7 @@ export default function Store({setCurrentPage, setCurrentGame}) {
     <>
     Store
     <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'> 
-      {/* <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer" id='card1' 
+      <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer" id='card1' 
         onClick={ () => {
           setCurrentPage("SingleGame"); 
           setCurrentGame("gameId");
@@ -43,7 +43,7 @@ export default function Store({setCurrentPage, setCurrentGame}) {
         <CardFooter divider className="flex items-center justify-between py-3">
           <Typography variant="small">$19.99</Typography>
         </CardFooter>
-      </Card> */}
+      </Card>
       </div>
     </>
   )
