@@ -9,7 +9,8 @@ import {
 export default function SingleGame() {
   return (
     <>
-      <img class="mx-auto"
+    Single Game
+      {/* <img class="mx-auto"
         src={game.image}
         className='h-1/3 w-1/3 mt-40'
       />
@@ -40,7 +41,7 @@ export default function SingleGame() {
             </Typography>
           </CardFooter>
         </Card>
-      </div>
+      </div> */}
     </>
   )
 }

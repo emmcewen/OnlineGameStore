@@ -2,6 +2,7 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { Game, User } = require("../models");
 const { signToken } = require("../utils/auth");
+const { Types } = require('mongoose');
 
 // resolver const
 const resolvers = {
@@ -19,6 +20,7 @@ const resolvers = {
       return games;
     },
     user: async (parent, args, context) => {
+      console.log(context.user._id)
       if (context.user) {
         const user = await User.findById(context.user._id);
         return user;
@@ -65,12 +67,13 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
     removeFromCart: async (parent, { gameId }, context) => {
-      console.log(context);
+ 
+      console.log(context.user._id, gameId);
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { cart: { gameId } } },
-          { new: true }
+          { $pull: { cart:  {gameId: Types.ObjectId(gameId)}  } },
+          { new: true, runValidators: true }
         );
 
         return updatedUser;

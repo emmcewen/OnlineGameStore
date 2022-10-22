@@ -21,6 +21,7 @@ const typeDefs = gql`
     }
 
     type CartItem {
+        gameId: ID
         image: String
         title: String!
         price: Float!
@@ -46,6 +47,7 @@ const typeDefs = gql`
     }
 
     input CartInput {
+        gameId: ID!
         image: String
         title: String!
         price: Float!
