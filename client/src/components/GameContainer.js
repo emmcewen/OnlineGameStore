@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 // import Nav from './Nav';
 import Store from '../pages/Store';
+import SignupForm from '../components/SignupForm'
+import LoginForm from './LoginForm'
 import SingleGame from '../pages/SingleGame'
 
 
