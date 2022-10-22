@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-//Example code to model ours from
+// Example code to model ours from
 
 // import React from 'react';
-// import Cart from '.';
+// import Cart from './Cart';
 // import AddToCart from '../AddedToCart/AddedToCart';
-// import Card from '';
-// import { useLocation } from 'react-router-dom';
+// import Card from '../pages/Store';
 
 // const Card = props => {
 //     const { 
@@ -17,14 +15,6 @@
 //         handleHoverGame,
 //         handleSelectGame
 //       } = props;
-
-//     const variants = {
-//         initial: { opacity: 0 },
-//         animate: { opacity: 1 },
-//         exit: { opacity: 0 },
-//     }
-
-//     const location = useLocation();
 
 //     return (
 //           <div 
@@ -64,8 +54,3 @@
 //   }
   
 //   export default Card;
-=======
-// store page
-
-// functionality to pull infomation from the card and map it all out for singleGame page and pull info to cart
->>>>>>> 3a30ca8598fe9f1823e84b37a365bb8e93c63bee
