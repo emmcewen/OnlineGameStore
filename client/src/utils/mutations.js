@@ -3,6 +3,11 @@ import { gql } from '@apollo/client';
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
+import { gql } from "@apollo/client";
+
+export const LOGIN_USER = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
       token
       user {
         _id
@@ -11,6 +16,7 @@ export const ADD_USER = gql`
     }
   }
 `;
+<<<<<<< HEAD
 
 export const LOGIN = gql`
   mutation login($email: String!, $password: String!) {
@@ -20,10 +26,21 @@ export const LOGIN = gql`
             _id
             username
         }
+=======
+export const DELETE_GAME = gql`
+  mutation removeGame($gameId: ID!) {
+    removeGame(gameId: $gameId) {
+      _id
+      username
+      email
+      gameId {
+      }
+>>>>>>> 957787ceca23ae65c8bfd427684d6d5b881018c6
     }
   }
 `;
 
+<<<<<<< HEAD
 export const ADD_TO_CART = gql`
 mutation addToCart(body: GameInput) {
   addToCart(body:GameInput) {
@@ -47,5 +64,42 @@ mutation removeFromCart($_gameId: ID!) {
         username
     }
   }
+=======
+export const SAVE_GAME = gql`
+  mutation saveGame($body: SavedGameInput) {
+    saveGame(body: $body) {
+      _id
+      username
+      email
+      savedGame{
+        authors
+        gameId
+        image
+        title
+        description
+      }
+    }
+  }
+`;
+
+export const ADD_USER = gql`
+  mutation addUser($username: String!, $password: String!) {
+    addUser(username: $username, email: $email, password: $password) {
+     token
+     user{
+         _id
+         username
+         email
+        gameCount
+         savedGame{
+             authors
+             gameId
+             image
+             title
+             description
+         }
+     }
+    }
+>>>>>>> 957787ceca23ae65c8bfd427684d6d5b881018c6
 }
 `;

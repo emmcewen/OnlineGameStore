@@ -1,13 +1,12 @@
 import React from 'react';
 import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Typography,
-  } from "@material-tailwind/react";
+  Card,
+  CardBody,
+  CardFooter,
+  Typography,
+} from "@material-tailwind/react";
 
-export function GameDescription() {
+export default function GameDescription() {
     return (
         <>
         <Card className="w-96">
