@@ -21,7 +21,6 @@ const typeDefs = gql`
     }
 
     type CartItem {
-        cartItemId: ID!
         image: String
         title: String!
         price: Float!
@@ -47,7 +46,6 @@ const typeDefs = gql`
     }
 
     input CartInput {
-        cartItemId: String!
         image: String
         title: String!
         price: Float!
@@ -57,7 +55,7 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
         addToCart(body: CartInput): User
-        removeFromCart(cartItemId: ID!): User
+        removeFromCart(gameId: ID!): User
     }
 `
 
