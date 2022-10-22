@@ -41,6 +41,7 @@ const typeDefs = gql`
         # query user
         # query genre
         user: User
+        allGames: [Game]
         game(gameId: ID!): Game
         genre(genreName: genreName): [Game]
     }

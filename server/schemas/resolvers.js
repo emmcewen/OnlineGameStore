@@ -7,6 +7,9 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   // -- Query find with gameid, user , genre ,
   Query: {
+    allGames: async (parent, args, context) => {
+      return await Game.find();
+    },
     game: async (parent, args, context) => {
       return await Game.findById(args.gameId);
     },
