@@ -9,9 +9,13 @@ Game {
 }
 
 */
-const { Schema, model } = require("mongoose");
+const { Schema, model, Types } = require("mongoose");
 
 const gameSchema = new Schema({
+  gameId: {
+    type: Schema.Types.ObjectId,
+    default: () => new Types.ObjectId()
+  },
   image: {
     type: String,
   },
