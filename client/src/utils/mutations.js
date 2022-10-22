@@ -29,3 +29,30 @@ export const ADD_USER = gql`
     }
 }
 `;
+
+export const ADD_TO_CART = gql`
+mutation addToCart(body: GameInput) {
+  addToCart(body:GameInput) {
+ 
+    cart_total   
+    cart {
+        price
+        gameId
+        title
+    }
+  }
+}
+`;
+
+export const DELETE_GAME = gql`
+  mutation removeGame($gameId: ID!) {
+    removeGame(gameId: $gameId) {
+      _id
+      username
+      email
+      gameId {
+        ID
+      }
+    }
+  }
+`;
