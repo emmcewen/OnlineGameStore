@@ -1,10 +1,10 @@
 import React from 'react';
-import GameContainer from './components/GameContainer';
+import PageContainer from './components/PageContainer';
 import "./output.css"
 export default function App() {
     return (
         <>
-            <GameContainer />
+            <PageContainer />
         </>
     )
 }
