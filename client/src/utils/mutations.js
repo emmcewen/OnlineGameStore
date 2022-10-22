@@ -16,7 +16,6 @@ export const LOGIN_USER = gql`
     }
   }
 `;
-<<<<<<< HEAD
 
 export const LOGIN = gql`
   mutation login($email: String!, $password: String!) {
@@ -26,7 +25,6 @@ export const LOGIN = gql`
             _id
             username
         }
-=======
 export const DELETE_GAME = gql`
   mutation removeGame($gameId: ID!) {
     removeGame(gameId: $gameId) {
@@ -35,12 +33,10 @@ export const DELETE_GAME = gql`
       email
       gameId {
       }
->>>>>>> 957787ceca23ae65c8bfd427684d6d5b881018c6
     }
   }
 `;
 
-<<<<<<< HEAD
 export const ADD_TO_CART = gql`
 mutation addToCart(body: GameInput) {
   addToCart(body:GameInput) {
@@ -64,7 +60,6 @@ mutation removeFromCart($_gameId: ID!) {
         username
     }
   }
-=======
 export const SAVE_GAME = gql`
   mutation saveGame($body: SavedGameInput) {
     saveGame(body: $body) {
@@ -100,6 +95,5 @@ export const ADD_USER = gql`
          }
      }
     }
->>>>>>> 957787ceca23ae65c8bfd427684d6d5b881018c6
 }
 `;
