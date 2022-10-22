@@ -25,7 +25,7 @@ export default function Store({setCurrentPage, setCurrentGame}) {
       >
         <CardHeader className="relative h-56">
           <img
-            src="/img/MinecraftCard.jpg"
+            src={game.image}
             alt="img-blur-shadow"
             className="h-full w-full"
           />
