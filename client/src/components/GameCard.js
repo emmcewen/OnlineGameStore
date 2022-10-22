@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Example code to model ours from
 
 // import React from 'react';
@@ -63,3 +64,8 @@
 //   }
   
 //   export default Card;
+=======
+// store page
+
+// functionality to pull infomation from the card and map it all out for singleGame page and pull info to cart
+>>>>>>> 3a30ca8598fe9f1823e84b37a365bb8e93c63bee
