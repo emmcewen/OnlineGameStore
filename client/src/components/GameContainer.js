@@ -8,27 +8,21 @@ import SingleGame from '../pages/SingleGame'
 
 export default function GameContainer() {
   const [currentPage, setCurrentPage] = useState('Store');
+  const [currentGame, setCurrentGame] = useState('');
 
   const renderPage = () => {
     if (currentPage === 'Store') {
-      return <Store />;
-    }
-    if (currentPage === 'SignupForm') {
-      return <SignupForm />;
-    }
-    if (currentPage === 'LoginForm') {
-      return <LoginForm />;
+      return <Store setCurrentPage={setCurrentPage} setCurrentGame={setCurrentGame}/>;
     }
     if (currentPage === 'SingleGame'){
-      return <SingleGame />;
+      return <SingleGame currentGame={currentGame}/>;
     }
   };
 
-  const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div>
-      {/* <Nav currentPage={currentPage} handlePageChange={handlePageChange} /> */}
+      {/* <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
       {renderPage()}
     </div>
   );

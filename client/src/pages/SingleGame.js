@@ -1,11 +1,10 @@
 import React from 'react';
 import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Typography,
-  } from "@material-tailwind/react";
+  Card,
+  CardBody,
+  CardFooter,
+  Typography,
+} from "@material-tailwind/react";
 
 export default function GameDescription() {
     return (
