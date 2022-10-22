@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-// import Nav from './Nav';
+import Navbar from "../components/Navbar"
 import Store from '../pages/Store';
-import SignupForm from '../components/SignupForm'
-import LoginForm from './LoginForm'
 import SingleGame from '../pages/SingleGame'
 
 
@@ -17,12 +15,13 @@ export default function GameContainer() {
     if (currentPage === 'SingleGame'){
       return <SingleGame currentGame={currentGame}/>;
     }
+  
   };
 
 
   return (
     <div>
-      {/* <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
+      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       {renderPage()}
     </div>
   );
