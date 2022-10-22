@@ -11,37 +11,30 @@ export const LOGIN_USER = gql`
     }
   }
 `;
-export const DELETE_BOOK = gql`
-  mutation removeBook($bookId: ID!) {
-    removeBook(bookId: $bookId) {
+export const DELETE_GAME = gql`
+  mutation removeGame($gameId: ID!) {
+    removeGame(gameId: $gameId) {
       _id
       username
       email
-      savedBooks {
-        authors
-        bookId
-        image
-        title
-        description
-        link
+      gameId {
       }
     }
   }
 `;
 
-export const SAVE_BOOK = gql`
-  mutation saveBook($body: SavedBookInput) {
-    saveBook(body: $body) {
+export const SAVE_GAME = gql`
+  mutation saveGame($body: SavedGameInput) {
+    saveGame(body: $body) {
       _id
       username
       email
-      savedBooks {
+      savedGame{
         authors
-        description
-        title
-        bookId
+        gameId
         image
-        link
+        title
+        description
       }
     }
   }
@@ -55,10 +48,10 @@ export const ADD_USER = gql`
          _id
          username
          email
-         bookCount
-         savedBooks{
+        gameCount
+         savedGame{
              authors
-             bookId
+             gameId
              image
              title
              description

@@ -13,10 +13,10 @@ export default function GameContainer() {
     if (currentPage === 'Store') {
       return <Store />;
     }
-    if (currentPage === 'SignIn') {
+    if (currentPage === 'SignupForm') {
       return <SignupForm />;
     }
-    if (currentPage === 'SignIn') {
+    if (currentPage === 'LoginForm') {
       return <LoginForm />;
     }
     if (currentPage === 'SingleGame'){
