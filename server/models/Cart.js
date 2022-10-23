@@ -1,7 +1,9 @@
 const { Schema } = require('mongoose');
 
 const cartSchema = new Schema({
-    
+    gameId: {
+        type: Schema.Types.ObjectId
+    },
     image: {
         type: String,
     },
