@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
+import { QUERY_ALL_GAMES } from '../utils/queries';
 import {
   Card,
   CardHeader,
