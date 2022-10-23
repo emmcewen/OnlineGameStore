@@ -9,13 +9,16 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import '../styles/style.css';
-import { QUERY_ALL_GAMES } from '../utils/queries';
-import AddCartBtn from '../components/AddCartBtn'
-import { useQuery } from '@apollo/client';
-
+ 
 export default function Store({ setCurrentPage, setCurrentGame }) {
   const { data, loading } = useQuery(QUERY_ALL_GAMES)
-  const game = data
+  console.log (data)
+  const game = data?.allGames || [];
+  console.log (game)
+  
+  if(loading) {
+    return <h1>LOADING...</h1>
+  }
   return (
     <>
       <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'>
@@ -28,7 +31,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
               }}>
               <CardHeader className="relative h-56">
                 <img
-                  src={game.image}
+                  src={game.cardimage}
                   alt="img-blur-shadow"
                   className="h-full w-full"
                 />
@@ -46,7 +49,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
               </CardBody>
               <CardFooter divider className="flex items-center justify-between py-3">
                 <Typography variant="small">${game.price}</Typography>
-                <AddCartBtn />
+                {/* <AddCartBtn /> */}
               </CardFooter>
             </Card>
           )
