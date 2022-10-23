@@ -131,4 +131,3 @@ export default function Nav({ currentPage, handlePageChange }) {
     </Navbar>
   );
 }
-
