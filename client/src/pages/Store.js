@@ -8,6 +8,8 @@ import {
 } from "@material-tailwind/react";
 import '../styles/style.css';
 
+
+
 export default function Store({setCurrentPage, setCurrentGame}) {
   return (
     <>
@@ -17,7 +19,7 @@ export default function Store({setCurrentPage, setCurrentGame}) {
       <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer" id='card1' 
         onClick={ () => {
           setCurrentPage("SingleGame"); 
-          setCurrentGame("gameId");
+          setCurrentGame(game);
         }}
       >
         <CardHeader className="relative h-56">
