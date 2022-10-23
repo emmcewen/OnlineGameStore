@@ -1,3 +1,0 @@
-// game description page
-
-//
