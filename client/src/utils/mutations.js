@@ -59,20 +59,6 @@ export const REMOVE_FROM_CART = gql`
   }
 `;
 
-export const ADD_TO_CART = gql`
-mutation addToCart(body: GameInput) {
-  addToCart(body:GameInput) {
- 
-    cart_total   
-    cart {
-        price
-        gameId
-        title
-    }
-  }
-}
-`;
-
 export const DELETE_GAME = gql`
   mutation removeGame($gameId: ID!) {
     removeGame(gameId: $gameId) {

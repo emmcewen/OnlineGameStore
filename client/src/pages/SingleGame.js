@@ -9,11 +9,7 @@ import {
 export default function SingleGame({currentGame: game}) {
   return (
     <>
-<<<<<<< HEAD
-    Single Game
-=======
       Single Game
->>>>>>> affa24dd349f0372f9d43495cffbb81d8737dbb4
       <img class="mx-auto"
         src={game.image}
         className='h-1/3 w-1/3 mt-40'
