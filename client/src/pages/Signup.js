@@ -1,87 +1,77 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import Auth from '../utils/auth';
-import { ADD_USER } from '../utils/mutations';
+// import React, { useState } from 'react';
+// import { useMutation } from '@apollo/client';
+// import Auth from '../utils/auth';
+// import { LockClosedIcon } from '@heroicons/react/20/solid'
+// import { ADD_USER } from '../utils/mutations';
+// export default function Example() {
+//   return (
+//     <>
+//       {/*
+//         This example requires updating your template:
 
-function Signup() {
-  const [formState, setFormState] = useState({ email: '', password: '' });
-  const [addUser] = useMutation(ADD_USER);
-
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    const mutationResponse = await addUser({
-      variables: {
-        email: formState.email,
-        password: formState.password,
-        firstName: formState.firstName,
-        lastName: formState.lastName,
-      },
-    });
-    const token = mutationResponse.data.addUser.token;
-    Auth.login(token);
-  };
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
-
-  return (
-    <div className="container my-1">
-      <Link to="/login">← Go to Login</Link>
-
-      <h2>Signup</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            placeholder="First"
-            name="firstName"
-            type="firstName"
-            id="firstName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            placeholder="Last"
-            name="lastName"
-            type="lastName"
-            id="lastName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-  );
-}
-
-export default Signup;
+//         ```
+//         <html class="h-full bg-gray-50">
+//         <body class="h-full">
+//         ```
+//       */}
+//       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+//         <div className="w-full max-w-md space-y-8">
+//           <div>
+//             <img
+//               className="mx-auto h-12 w-auto"
+//               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+//               alt="Your Company"
+//             />
+//             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+//               Sign in to your account
+//             </h2>
+//           </div>
+//           <form className="mt-8 space-y-6" action="#" method="POST">
+//             <input type="hidden" name="remember" defaultValue="true" />
+//             <div className="-space-y-px rounded-md shadow-sm">
+//               <div>
+//                 <label htmlFor="email-address" className="sr-only">
+//                   Email address
+//                 </label>
+//                 <input
+//                   id="email-address"
+//                   name="email"
+//                   type="email"
+//                   autoComplete="email"
+//                   required
+//                   className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+//                   placeholder="Email address"
+//                 />
+//               </div>
+//               <div>
+//                 <label htmlFor="password" className="sr-only">
+//                   Password
+//                 </label>
+//                 <input
+//                   id="password"
+//                   name="password"
+//                   type="password"
+//                   autoComplete="current-password"
+//                   required
+//                   className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+//                   placeholder="Password"
+//                 />
+//               </div>
+//             </div>
+//             <div>
+//               <button
+//                 type="submit"
+//                 className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+//               >
+//                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+//                   <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
+//                 </span>
+//                 Sign in
+//               </button>
+//             </div>
+//           </form>
+//         </div>
+//       </div>
+//     </>
+//   )
+// }
