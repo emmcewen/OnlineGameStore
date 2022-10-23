@@ -32,10 +32,6 @@ const typeDefs = gql`
         user: User
     }
 
-    input genreName {
-        genre: String!
-    }
-
     type Query {
         # query game id 
         # query user
@@ -43,7 +39,6 @@ const typeDefs = gql`
         user: User
         allGames: [Game]
         game(gameId: ID!): Game
-        genre(genreName: genreName): [Game]
     }
 
     input CartInput {

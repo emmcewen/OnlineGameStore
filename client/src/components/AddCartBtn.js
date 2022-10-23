@@ -1,6 +1,9 @@
 import React from 'react';
+import { ADD_TO_CART } from '../utils/mutations';
+
 
 export default function AddCartButton({game}) {
+    
 
     function handleAddToCart() {
         
