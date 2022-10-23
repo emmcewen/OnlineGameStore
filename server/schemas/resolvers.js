@@ -14,11 +14,11 @@ const resolvers = {
     game: async (parent, args, context) => {
       return await Game.findById(args.gameId);
     },
-    // TODO: ask about genre query and if we need populate
-    genre: async (parent, args, context) => {
-      const games = await Game.find({ genres: args.genreName });
-      return games;
-    },
+    // // TODO: ask about genre query and if we need populate
+    // genre: async (parent, args, context) => {
+    //   const games = await Game.find({ genres: args.genreName });
+    //   return games;
+    // },
     user: async (parent, args, context) => {
       console.log(context.user._id)
       if (context.user) {
