@@ -6,7 +6,7 @@ import {
   Typography,
 } from '@material-tailwind/react'
 
-export default function SingleGame() {
+export default function SingleGame({currentGame: game}) {
   return (
     <>
       Single Game
@@ -14,7 +14,7 @@ export default function SingleGame() {
         src={game.image}
         className='h-1/3 w-1/3 mt-40'
       />
-      <div class='card'>
+      <div className='card'>
         <Card className="h-auto bg-blue bg-opacity-60 text-grey">
           <CardBody className="text-center">
             <Typography variant="h5" className="mb-2">
