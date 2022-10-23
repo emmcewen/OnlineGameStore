@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import {
   Navbar,
@@ -9,7 +10,11 @@ import {
  
 export default function Nav({ currentPage, handlePageChange }) {
   const [openNav, setOpenNav] = useState(false);
- 
+
+  const [isShown, setIsShown] = useState(false)
+  const handleClick = event => {
+    setIsShown(current => !current);
+  }
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -39,7 +44,6 @@ export default function Nav({ currentPage, handlePageChange }) {
         color="blue-gray"
         className="p-1 font-normal"
       >
- 
         <a href="#login"
           onClick={() => handlePageChange('Login')}
           className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}>
@@ -66,6 +70,7 @@ export default function Nav({ currentPage, handlePageChange }) {
       >
       </Typography>
     </ul>
+    
   );
  
   return (
@@ -82,7 +87,6 @@ export default function Nav({ currentPage, handlePageChange }) {
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button variant="gradient" size="sm" className="hidden lg:inline-block">
-          <span>Buy Now</span>
         </Button>
         <IconButton
           variant="text"
@@ -124,8 +128,8 @@ export default function Nav({ currentPage, handlePageChange }) {
       </div>
       <MobileNav open={openNav}>
         {navList}
-        <Button variant="gradient" size="sm" fullWidth className="mb-2">
-          <span>Buy Now</span>
+        <Button onClick={() => handlePageChange('Cart')}>
+          Cart
         </Button>
       </MobileNav>
     </Navbar>
