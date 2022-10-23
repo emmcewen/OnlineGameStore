@@ -13,11 +13,11 @@ import { useQuery } from '@apollo/client';
 
 export default function Store({ setCurrentPage, setCurrentGame }) {
   const { data, loading } = useQuery(QUERY_ALL_GAMES)
-  const games = data
+  const game = data
   return (
     <>
       <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'>
-        {games.map((game) => {
+        {game.map((game) => {
           return (
             <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer" id='card1'
               onClick={() => {
@@ -36,7 +36,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
                   {game.title}
                 </Typography>
                 <Typography>
-                  {game.description}
+                  {game.summary}
                   <br />
                   <br />
                   <br />
