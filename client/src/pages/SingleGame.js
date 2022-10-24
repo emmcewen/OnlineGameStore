@@ -17,7 +17,7 @@ export default function SingleGame({ currentGame: game }) {
       </div>
       <div class="flex items-center justify-center">
         <div className='card'>
-          <Card className="h-auto font-press-start bg-blue bg-opacity-60 text-grey">
+          <Card className="h-auto bg-blue bg-opacity-60 text-grey">
             <CardBody className="text-center">
               <Typography variant="h5" className="mb-2">
                 About
