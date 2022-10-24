@@ -19,6 +19,7 @@ export default function SingleGame() {
       <img class="mx-auto"
         src={game.image}
         className='h-1/3 w-1/3 mt-40'
+        alt='game'
       />
       <div class='card'>
         <Card className="h-auto bg-blue bg-opacity-60 text-grey">
