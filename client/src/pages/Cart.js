@@ -106,11 +106,11 @@ const game = [
                         /> */}
                             <div>
                                 <Typography>
-                                    {game.title} <br />
+                                   Title: {game.title} <br />
                                 </Typography>
-                                <Typography>
-                                    $ {game.price}
-                                </Typography>
+                                <Typography >
+                                    <span class='flex space-x-4 space-x-reverse'> $ {game.price}.00
+                                </span>
                                 <span
                                     // role="img"
                                     // aria-label="trash"
@@ -118,6 +118,7 @@ const game = [
                                 >
                                     🗑️
                                 </span>
+                                </Typography>
                             </div>
                         </CardBody>
                         <CardFooter divider className="flex items-center justify-between py-3">
