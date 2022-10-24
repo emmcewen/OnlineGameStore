@@ -6,84 +6,84 @@ import {
     Typography,
     Button
 } from '@material-tailwind/react';
-import { useLazyQuery } from '@apollo/client';
-import { QUERY_CHECKOUT } from '../utils/queries';
-import Auth from '../utils/auth';
-import { useStoreContext } from '../utils/GlobalState';
-import { idbPromise } from '../utils/helpers';
-import { ADD_TO_CART } from '../utils/mutations';
-import { REMOVE_FROM_CART } from '../utils/mutations';
+// import { useLazyQuery } from '@apollo/client';
+// import { QUERY_CHECKOUT } from '../utils/queries';
+// import Auth from '../utils/auth';
+// import { useStoreContext } from '../utils/GlobalState';
+// import { idbPromise } from '../utils/helpers';
+// import { ADD_TO_CART } from '../utils/mutations';
+// import { REMOVE_FROM_CART } from '../utils/mutations';
 
-const game = ({ game })
-// [
-//     {
-//         id: 1,
-//         title: 'Title1',
-//         price: '$60.00',
-//         quantity: 1,
-//         image: 'link to img src1',
-//         imageAlt: 'Game description 1',
-//     },
-//     {
-//         id: 2,
-//         title: 'Title2',
-//         price: '$60.00',
-//         quantity: 1,
-//         image: 'link to img src 2',
-//         imageAlt: 'Game desc 2',
-//     },
-// ];
+const game =
+[
+    {
+        id: 1,
+        title: 'Title1',
+        price: '$60.00',
+        quantity: 1,
+        image: 'link to img src1',
+        imageAlt: 'Game description 1',
+    },
+    {
+        id: 2,
+        title: 'Title2',
+        price: '$60.00',
+        quantity: 1,
+        image: 'link to img src 2',
+       
+    },
+];
 
-const Cart = ({ item }) => {
+// const Cart = ({ game }) => {
 
-    const [, dispatch] = useStoreContext();
+    // const [, dispatch] = useStoreContext();
 
-    const removeFromCart = item => {
-        dispatch({
-            type: REMOVE_FROM_CART,
-            _id: item._id
-        });
-        idbPromise('cart', 'delete', { ...item });
+    // const removeFromCart = game => {
+    //     dispatch({
+    //         type: REMOVE_FROM_CART,
+    //         _id: game._id
+    //     });
+    //     idbPromise('cart', 'delete', { ...game });
 
-    };
-    const AddToCart = (e) => {
-        const value = e.target.value;
-        dispatch({
-            type: ADD_TO_CART,
-            _id: item._id,
-            purchaseQuantity: parseInt(value)
-        });
-        idbPromise('cart', 'put', { ...item, purchaseQuantity: parseInt(value) });
+    // };
+    // const AddToCart = (e) => {
+    //     const value = e.target.value;
+    //     dispatch({
+    //         type: ADD_TO_CART,
+    //         _id: game._id,
+    //         purchaseQuantity: parseInt(value)
+    //     });
+    //     idbPromise('cart', 'put', { ...game, purchaseQuantity: parseInt(value) });
 
-    }
-
-
-    function calculateTotal() {
-        let sum = 0;
-        Cart.forEach((item) => {
-            sum += item.price * item.purchaseQuantity;
-        });
-        return sum.toFixed(2);
-    };
+    // }
 
 
+    // function calculateTotal() {
+    //     let sum = 0;
+    //     Cart.forEach((game) => {
+    //         sum += game.price * game.purchaseQuantity;
+    //     });
+    //     return sum.toFixed(2);
+    // };
 
 
-    function Cart() {
+
+
+    export default function Cart() {
         //    const Query CartItems
-        const [state, dispatch] = useStoreContext();
-        const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+        // const [state, dispatch] = useStoreContext();
+        // const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-        useEffect(() => {
-            async function getCart() {
-              const cart = await idbPromise('cart', 'get');
-              dispatch({ type: ADD_TO_CART, products: [...cart] });
-            }
+        // useEffect(() => {
+        //     async function getCart() {
+        //       const cart = await idbPromise('cart', 'get');
+        //       dispatch({ type: ADD_TO_CART, products: [...cart] });
+        //     }
         
-            if (!state.cart.length) {
-              getCart();
-            }
-          }, [state.cart.length, dispatch]);
+        //     if (!state.cart.length) {
+        //       getCart();
+        //     }
+        //   }, [state.cart.length, dispatch]);
 
 
         return (
@@ -108,16 +108,16 @@ const Cart = ({ item }) => {
                                     $ {game.price}
                                 </Typography>
                                 <span
-                                    role="img"
-                                    aria-label="trash"
-                                    onClick={() => removeFromCart(item)}
+                                    // role="img"
+                                    // aria-label="trash"
+                                    // onClick={() => removeFromCart(game)}
                                 >
                                     🗑️
                                 </span>
                             </div>
                         </CardBody>
                         <CardFooter divider className="flex items-center justify-between py-3">
-                            <Typography variant="small">Total: ${calculateTotal()}
+                            <Typography variant="small">Total: $0
                             </Typography>
                             <Button variant="small" color="gray" className="flex gap-1">
                                 <i className="fas fa-map-marker-alt fa-sm mt-[3px]" />
@@ -129,5 +129,5 @@ const Cart = ({ item }) => {
             </>
         )
     }
-}
- export default Cart;
+// }
+//  export default Cart;
