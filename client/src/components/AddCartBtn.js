@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/client';
 // include more state (indicate more info about cart items with state)
 export default function AddCartButton({game}) {
     const [addToCart] = useMutation(ADD_TO_CART);
+  
 
     // const game = data.?game
 

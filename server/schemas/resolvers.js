@@ -3,6 +3,7 @@ const { AuthenticationError } = require("apollo-server-express");
 const { Game, User } = require("../models");
 const { signToken } = require("../utils/auth");
 const { Types } = require('mongoose');
+const {cartSchema} = require ('../models/Cart')
 
 // resolver const
 const resolvers = {
@@ -83,13 +84,13 @@ const resolvers = {
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      const order = new Order({ products: args.products });
+      const cart = new cartSchema({ products: args.products });
       const line_items = [];
 
-      const { CartItem } = await order.populate('products');
+      const {cartSchema} = await cart.populate('products');
 
       for (let i = 0; i < products.length; i++) {
-        const product = await stripe.products.create({
+        const game = await stripe.products.create({
           name: products[i].name,
           description: products[i].description,
           images: [`${url}/images/${products[i].image}`]
