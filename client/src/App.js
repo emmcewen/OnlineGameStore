@@ -1,12 +1,11 @@
 import React from 'react';
-import GameContainer from './components/GameContainer';
+import PageContainer from './components/PageContainer';
 import "./output.css"
-import LoginForm from './components/LoginForm';
-import SignupForm from './components/SignupForm';
+import "./input.css"
 export default function App() {
     return (
         <>
-            <GameContainer />
+            <PageContainer />
         </>
     )
 }

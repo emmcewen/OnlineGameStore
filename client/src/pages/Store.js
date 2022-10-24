@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
+import { QUERY_ALL_GAMES } from '../utils/queries';
 import {
   Card,
   CardHeader,
@@ -6,47 +8,52 @@ import {
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
-import { Button } from "@material-tailwind/react";
-import {FaRegThumbsUp} from 'react-icons/fa';
-import {FaRegThumbsDown} from 'react-icons/fa';
 import '../styles/style.css';
+import AddCartBtn from '../components/AddCartBtn';
 
-export default function Store({setCurrentPage, setCurrentGame}) {
-  //TODO: refactor to generate cards from array of data and seperate card component
+ 
+export default function Store({ setCurrentPage, setCurrentGame }) {
+  const { data, loading } = useQuery(QUERY_ALL_GAMES)
+  console.log (data)
+  const game = data?.allGames || [];
+  console.log (game)
+  
+  if(loading) {
+    return <h1 className='text-white'>LOADING...</h1>
+  }
+
   return (
     <>
-    <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'> 
-      <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer" id='card1' 
-        onClick={ () => {
-          setCurrentPage("SingleGame"); 
-          setCurrentGame("gameId");
-        }
-        }
-      >
-        <CardHeader className="relative h-56">
-          <img
-            src={game.image}
-            alt="img-blur-shadow"
-            className="h-full w-full"
-          />
-        </CardHeader>
-        <CardBody className="text-center">
-          <Typography variant="h5" className="mb-2">
-            {/* {game.title} */}
-          </Typography>
-          <Typography>
-            Fight your way through an exciting action-adventure game, inspired by classic dungeon crawlers and set in the Minecraft universe!
-            <br />
-            <br />
-            <br />
-          </Typography>
-        </CardBody>
-        <CardFooter divider className="flex items-center justify-between py-3">
-          <Typography variant="small">$19.99</Typography>
-          <Button className='button ml-14 bg-black'><FaRegThumbsUp></FaRegThumbsUp></Button> 
-          <Button className='button2 mr-5 bg-black'><FaRegThumbsDown></FaRegThumbsDown></Button>
-        </CardFooter>
-      </Card>
+      <div className='grid md:grid-cols-2 xl:grid-cols-3 content-center content-evenly'>
+        {game.map((game) => {
+          return (
+            
+            <Card className="w-96 mt-40 ml-40 bg-blue bg-opacity-60 text-grey cursor-pointer container"
+              onClick={() => {
+                setCurrentPage("SingleGame");
+                setCurrentGame(game);
+              }}>
+              <CardHeader className="relative h-56">
+                <img
+                  src={game.image}
+                  alt="img-blur-shadow"
+                  className="h-full w-full"
+                />
+              </CardHeader>
+              <CardBody className="text-center">
+                <Typography variant="h5" className="mb-2">
+                <h1 class="text-sm-2 font-press-start underline">{game.title}</h1>
+                </Typography>
+                <Typography>
+                  {game.summary}
+                </Typography>
+              </CardBody>
+              <CardFooter divider className="flex items-center justify-between py-3">
+                <Typography variant="small">${game.price}</Typography>
+              </CardFooter>
+            </Card>
+          )
+        })}
       </div>
     </>
   )
