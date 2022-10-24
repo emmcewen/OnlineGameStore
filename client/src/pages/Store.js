@@ -32,6 +32,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
               <CardHeader className="relative h-56">
                 <img class='image'
                   src={game.image}
+                  alt=""
                   className="h-full w-full"
                 />
               </CardHeader>

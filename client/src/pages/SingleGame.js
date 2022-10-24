@@ -12,6 +12,7 @@ export default function SingleGame({ currentGame: game }) {
       <div class="flex items-center justify-center">
         <img class="mx-auto"
           src={game.image}
+          alt = ""
           className='h-1/2 w-1/2 mt-40'
         />
       </div>

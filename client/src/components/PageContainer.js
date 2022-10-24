@@ -3,9 +3,8 @@ import Navbar from "./Nav";
 import Store from '../pages/Store';
 import Cart from '../pages/Cart';
 import Login from '../pages/Login';
-import Signup from '../pages/Signup';
-import SingleGame from '../pages/SingleGame';
-
+import Signup from '../pages/Signup'
+import SingleGame from '../pages/SingleGame'
 export default function PageContainer() {
   const [currentPage, setCurrentPage] = useState('Store');
   const [currentGame, setCurrentGame] = useState('');
@@ -14,7 +13,7 @@ export default function PageContainer() {
       return <Store setCurrentPage={setCurrentPage} setCurrentGame={setCurrentGame}/>;
     }
     if (currentPage === 'SingleGame'){
-      return <SingleGame />;
+      return <SingleGame currentGame={currentGame}/>;
     }
     if (currentPage === 'Cart'){
       return <Cart />;

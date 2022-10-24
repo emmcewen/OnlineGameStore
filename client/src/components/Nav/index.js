@@ -9,10 +9,10 @@ import {
 } from "@material-tailwind/react";
 export default function Nav({ currentPage, handlePageChange }) {
   const [openNav, setOpenNav] = useState(false);
-  const [isShown, setIsShown] = useState(false)
-  const handleClick = event => {
-    setIsShown(current => !current);
-  }
+  // const [isShown, setIsShown] = useState(false)
+  // const handleClick = event => {
+  //   setIsShown(current => !current);
+  // }
   useEffect(() => {
     window.addEventListener(
       "resize",
