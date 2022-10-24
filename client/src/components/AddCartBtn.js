@@ -34,4 +34,5 @@ export default function AddCartButton({game}) {
             >Add to cart</button>
         </div>
     )
+
 }

@@ -9,12 +9,15 @@ const Signup = () => {
   const [validated] = useState(false);
   const [addUser, { error }] = useMutation(ADD_USER);
   const [showAlert, setShowAlert] = useState(false);
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+
     try {
       const {data} = await addUser({ 
         variables: userFormData
@@ -24,6 +27,7 @@ const Signup = () => {
       console.error(err);
       setShowAlert(true);
     }
+
     setUserFormData({
       username: "",
       email: "",

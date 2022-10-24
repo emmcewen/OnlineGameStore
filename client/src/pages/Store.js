@@ -11,6 +11,7 @@ import {
 import '../styles/style.css';
 import AddCartBtn from '../components/AddCartBtn';
 
+ 
 export default function Store({ setCurrentPage, setCurrentGame }) {
   const { data, loading } = useQuery(QUERY_ALL_GAMES)
   console.log (data)
@@ -20,6 +21,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
   if(loading) {
     return <h1>LOADING...</h1>
   }
+
   return (
     <>
       <div className='grid md:grid-cols-2 xl:grid-cols-3 content-center content-evenly'>
@@ -32,9 +34,9 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
                 setCurrentGame(game);
               }}>
               <CardHeader className="relative h-56">
-                <img class='image'
+                <img
                   src={game.image}
-                  alt=""
+                  alt="img-blur-shadow"
                   className="h-full w-full"
                 />
               </CardHeader>

@@ -6,7 +6,6 @@ import {
 } from '@apollo/client';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './input.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { setContext } from '@apollo/client/link/context';
