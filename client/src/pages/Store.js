@@ -50,7 +50,6 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
               </CardBody>
               <CardFooter divider className="flex items-center justify-between py-3">
                 <Typography variant="small">${game.price}</Typography>
-                
                 <AddCartBtn game={game}/>
               </CardFooter>
             </Card>

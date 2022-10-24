@@ -9,11 +9,18 @@ export default function AddCartButton({game}) {
     // const game = data.?game
 
     async function handleAddToCart(game) {
+    console.log(game)
+
         try {
 
             const {data, error} = await addToCart({
                 variables: {
-                    body: { game }
+                    body: { 
+                        gameId: game.gameId,
+                        image: game.image,
+                        title: game.title,
+                        price: game.price,
+                     }
                 }
             });
 

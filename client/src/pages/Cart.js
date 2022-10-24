@@ -1,6 +1,9 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import { useQuery, useMutation } from '@apollo/client';
+import {QUERY_USER} from '../utils/queries';
+import {REMOVE_FROM_CART} from '../utils/mutations'
 
 const products = [
   {
@@ -28,6 +31,22 @@ const products = [
 
 export default function Cart() {
   const [open, setOpen] = useState(true)
+  const {loading, data} = useQuery(QUERY_USER)
+  const [RemoveFromCart] = useMutation(REMOVE_FROM_CART)
+
+  const carts = data?.user.cart || []
+
+  console.log(carts)
+
+  async function handleRemove(productId) {
+    console.log(productId)
+    await RemoveFromCart({
+      variables: {
+        gameId: productId
+      }
+      
+    })
+  }
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -76,11 +95,11 @@ export default function Cart() {
                       <div className="mt-8">
                         <div className="flow-root">
                           <ul role="list" className="-my-6 divide-y divide-gray-200">
-                            {products.map((product) => (
-                              <li key={product.id} className="flex py-6">
+                            {carts.map((product) => (
+                              <li key={product.gameId} className="flex py-6">
                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                   <img
-                                    src={product.imageSrc}
+                                    src={product.image}
                                     alt={product.imageAlt}
                                     className="h-full w-full object-cover object-center"
                                   />
@@ -103,6 +122,9 @@ export default function Cart() {
                                       <button
                                         type="button"
                                         className="font-medium text-indigo-600 hover:text-indigo-500"
+                                        onClick={() => {
+                                          handleRemove(product.gameId)
+                                        }}
                                       >
                                         Remove
                                       </button>
