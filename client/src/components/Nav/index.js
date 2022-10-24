@@ -34,48 +34,48 @@ export default function Nav({ currentPage, handlePageChange }) {
        <a href="#store"
         onClick={() => handlePageChange('Store')}
         className={currentPage === 'Store' ? 'nav-link active' : 'nav-link'}>
-        Store
+        <span class="text-sm-4 font-press-start underline">Store</span>
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-3 font-normal"
       >
         <a href="#login"
           onClick={() => handlePageChange('Login')}
           className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}>
-          Login
+           <span class="text-sm-4 font-press-start underline">Login</span>
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-3 font-normal"
       >
         <a href="#signup"
           onClick={() => handlePageChange('Signup')}
           className={currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}>
-          Signup
+          <span class="text-sm-4 font-press-start underline">SignUp</span>
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-extrabold "
+        className="p-1 font-normal "
       >
       </Typography>
       <Typography
         as='btn'
         variant='small'
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-3 font-normal"
       >
         <Button onClick={() => handlePageChange('Cart')}>
-          Cart
+        <span class="text-sm-4 font-press-start underline">Cart</span>
         </Button>
 
       </Typography>
@@ -90,11 +90,11 @@ export default function Nav({ currentPage, handlePageChange }) {
         <Typography
           as="a"
           href="#store"
-          variant="small"
+          variant="large"
           className="mr-4 cursor-pointer py-1.5 font-normal"
           onClick={() => handlePageChange('Store')}
         >
-          <span>Throne of Games</span>
+          <span class="text-2xl font-press-start underline">Throne of Games</span>
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button variant="gradient" size="sm" className="hidden lg:inline-block">
