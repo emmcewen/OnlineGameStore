@@ -8,6 +8,7 @@ export default function SingleGame(gameData) {
   const game = gameData.currentGame;
   return (
     <>
+    {console.log(game)}
       <img className="mx-auto h-1/2 w-1/2 mt-20"
         src={game.image}
         alt=""
@@ -32,7 +33,7 @@ export default function SingleGame(gameData) {
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
-                <AddCartBtn />
+                <AddCartBtn game={game}/>
               </Typography>
             </CardFooter>
           </Card>
