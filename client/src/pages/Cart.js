@@ -35,7 +35,7 @@ const game = [
     imageSrc: 'link to img src 2',
     imageAlt: 'Game description 2',
   },
-
+  // More products...
 ]
 
 // const Cart = ({ game }) => {
