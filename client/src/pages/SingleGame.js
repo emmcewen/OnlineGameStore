@@ -5,14 +5,31 @@ import {
   CardFooter,
   Typography,
 } from '@material-tailwind/react'
+import { QUERY_SINGLE_GAME } from '../utils/queries';
+import { useQuery } from '@apollo/client'
+import { useParams } from 'react-router-dom' 
+ 
 
-export default function SingleGame({currentGame: {game}}) {
+export default function SingleGame({currentPage:game})  {
+  const {gameId} = useParams();
+  const { data, loading } = useQuery(QUERY_SINGLE_GAME, {
+    variables: {gameId: game.gameId}
+  })
+
+ 
+  console.log(data)
+  
+
+  if(loading) {
+    return <h2>LOADING...</h2>
+  }
+
   return (
     <div className='container'>
-      Single Game
       <img class="mx-auto"
         src={game.image}
         className='h-1/3 w-1/3 mt-40'
+        alt='game'
       />
       <div className='card'>
         <Card className="h-auto bg-blue bg-opacity-60 text-grey">

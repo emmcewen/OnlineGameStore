@@ -4,6 +4,7 @@ import Store from '../pages/Store';
 import Cart from '../pages/Cart';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup'
+import SingleGame from '../pages/SingleGame'
 
 
 
@@ -17,6 +18,9 @@ export default function PageContainer() {
     }
     if (currentPage === 'Cart'){
       return <Cart />;
+    }
+    if (currentPage === 'SingleGame') {
+      return <SingleGame setCurrentGame={setCurrentGame}/>
     }
     if (currentPage === 'Login'){
       return <Login />;
