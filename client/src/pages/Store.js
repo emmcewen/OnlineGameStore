@@ -42,7 +42,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
               </CardHeader>
               <CardBody className="text-center">
                 <Typography variant="h5" className="mb-2">
-                  {game.title}
+                <h1 class="text-sm-2 font-press-start underline">{game.title}</h1>
                 </Typography>
                 <Typography>
                   {game.summary}
@@ -50,6 +50,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
               </CardBody>
               <CardFooter divider className="flex items-center justify-between py-3">
                 <Typography variant="small">${game.price}</Typography>
+                
                 <AddCartBtn game={game}/>
               </CardFooter>
             </Card>
