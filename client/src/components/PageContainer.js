@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import Navbar from "./Nav"
+import Navbar from "./Nav";
 import Store from '../pages/Store';
-import SingleGame from '../pages/SingleGame'
-import Login from '../pages/Login'
+import Cart from '../pages/Cart';
+import Login from '../pages/Login';
 import Signup from '../pages/Signup'
+
 
 
 export default function PageContainer() {
@@ -14,8 +15,8 @@ export default function PageContainer() {
     if (currentPage === 'Store') {
       return <Store setCurrentPage={setCurrentPage} setCurrentGame={setCurrentGame}/>;
     }
-    if (currentPage === 'SingleGame'){
-      return <SingleGame currentGame={currentGame}/>;
+    if (currentPage === 'Cart'){
+      return <Cart />;
     }
     if (currentPage === 'Login'){
       return <Login />;
