@@ -1,27 +1,17 @@
+import { Card, CardBody, CardFooter, Typography } from '@material-tailwind/react';
 import React from 'react';
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  Typography,
-} from '@material-tailwind/react'
-import { useQuery } from "@apollo/client";
-import { QUERY_SINGLE_GAME } from '../utils/queries';
-import AddCartBtn from '../components/AddCartBtn'
 
-export default function SingleGame() {
-  const { data, loading } = useQuery(QUERY_SINGLE_GAME, {
-    variables: game
-  })
-  const game = data
+import AddCartBtn from '../components/AddCartBtn';
+
+export default function SingleGame(gameData) {
+  const game = gameData.currentGame;
   return (
     <>
-      <img class="mx-auto"
+      <img className="mx-auto h-1/3 w-1/3 mt-40"
         src={game.image}
         alt = ""
-        className='h-1/3 w-1/3 mt-40'
       />
-      <div class='card'>
+      <div className='card'>
         <Card className="h-auto bg-blue bg-opacity-60 text-grey">
           <CardBody className="text-center">
             <Typography variant="h5" className="mb-2">
