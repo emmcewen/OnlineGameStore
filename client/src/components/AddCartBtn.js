@@ -10,11 +10,10 @@ export default function AddCartButton({game}) {
 
     async function handleAddToCart() {
         try {
-            const gameToSave = game;
 
             const {data, error} = await addToCart({
                 variables: {
-                    body: { ...gameToSave }
+                    body: { game }
                 }
             });
 

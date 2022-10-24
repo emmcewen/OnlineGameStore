@@ -24,10 +24,11 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
 
   return (
     <>
-      <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'>
+      <div className='grid md:grid-cols-2 xl:grid-cols-3 content-center content-evenly'>
         {game.map((game) => {
           return (
-            <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer" id='card1'
+            
+            <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer container" id='card1'
               onClick={() => {
                 setCurrentPage("SingleGame");
                 setCurrentGame(game);
