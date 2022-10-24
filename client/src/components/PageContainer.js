@@ -5,11 +5,6 @@ import Cart from '../pages/Cart';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup'
 import SingleGame from '../pages/SingleGame'
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 9fec2ec3524afb451de82e7d87d7512a3bd48ac1
 
 export default function PageContainer() {
   const [currentPage, setCurrentPage] = useState('Store');
@@ -24,9 +19,6 @@ export default function PageContainer() {
     }
     if (currentPage === 'Cart'){
       return <Cart />;
-    }
-    if (currentPage === 'SingleGame') {
-      return <SingleGame setCurrentGame={setCurrentGame}/>
     }
     if (currentPage === 'Login'){
       return <Login />;
