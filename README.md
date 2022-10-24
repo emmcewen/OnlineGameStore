@@ -32,7 +32,7 @@ Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-![throne of games homepage](/images/togscreenshot.PNG)
+![throne of games homepage](/images/ScreenShot.PNG)
 
 
 ## Credits
