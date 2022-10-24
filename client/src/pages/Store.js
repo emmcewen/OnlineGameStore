@@ -28,7 +28,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
         {game.map((game) => {
           return (
             
-            <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer container" id='card1'
+            <Card className="w-96 mt-20 ml-40 bg-blue bg-opacity-60 text-grey cursor-pointer container"
               onClick={() => {
                 setCurrentPage("SingleGame");
                 setCurrentGame(game);
@@ -42,18 +42,16 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
               </CardHeader>
               <CardBody className="text-center">
                 <Typography variant="h5" className="mb-2">
-                  {game.title}
+                <h1 class="text-sm-2 font-press-start underline">{game.title}</h1>
                 </Typography>
                 <Typography>
                   {game.summary}
-                  <br />
-                  <br />
-                  <br />
                 </Typography>
               </CardBody>
               <CardFooter divider className="flex items-center justify-between py-3">
                 <Typography variant="small">${game.price}</Typography>
-                {/* <AddCartBtn game={game} onClick={}/> */}
+                
+                <AddCartBtn game={game}/>
               </CardFooter>
             </Card>
           )
