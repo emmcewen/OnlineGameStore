@@ -28,7 +28,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
         {game.map((game) => {
           return (
             
-            <Card className="w-96 mt-20 ml-20 bg-blue bg-opacity-60 text-grey cursor-pointer container" id='card1'
+            <Card className="w-96 mt-20 ml-40 bg-blue bg-opacity-60 text-grey cursor-pointer container"
               onClick={() => {
                 setCurrentPage("SingleGame");
                 setCurrentGame(game);
