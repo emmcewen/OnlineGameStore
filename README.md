@@ -32,7 +32,7 @@ Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-![throne of games homepage](/images/togscreenshot.PNG)
+![throne of games homepage](/images/ScreenShot.PNG)
 
 
 ## Credits
@@ -40,13 +40,13 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 <strong>Emily:</strong> Project manager/repo owner, login and signup pages, nav bar and floated to help with other files. <br>
 github - https://github.com/emmcewen
 
-<strong>Marquis:</strong> Resolvers, typedefs, authentication setup, server, models and front end queries/mutations. <br>
+<strong>Marquis:</strong> Resolvers, typedefs, authentication setup, server, models and front end queries/mutations, cart.js. <br>
 github - https://github.com/MarquisWillis
 
-<strong>Adrian:</strong>Resolvers???<br>
+<strong>Adrian:</strong>Resolvers, utils/mutations and queries, cart.js.<br>
 github - https://github.com/afirmalan
 
-<strong>Mariah:</strong> Store and single game pages, gameSeeds.json, seed.js and readme <br>
+<strong>Mariah:</strong> Store and single game pages, custom styling, gameSeeds.json, seed.js and readme. <br>
 github - https://github.com/Mariah217
 
 ## License
