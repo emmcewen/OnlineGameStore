@@ -26,18 +26,18 @@ export default function PageContainer() {
     if (currentPage === 'Signup'){
       return <Signup />;
     }
-
   };
-
+  
   const handlePageChange = (page) => setCurrentPage(page);
-
-
   return (
     <div>
-
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
     </div>
   );
 }
- 
+
+
+
+
+
