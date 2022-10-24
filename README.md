@@ -2,7 +2,7 @@
 
 ## Description
 
-Throne of Games is an online e-commerce website where you can purchase games (some are free!).
+Throne of Games is an online e-commerce website where you can purchase games to play. 
 
 ## Table of Contents (Optional)
 
@@ -37,18 +37,17 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-<strong>Emily:</strong> project manager/repo owner, login and signup pages, nav bar. <br>
+<strong>Emily:</strong> Project manager/repo owner, login and signup pages, nav bar and floated to help with other files. <br>
 github - https://github.com/emmcewen
 
-<strong>Marquis:</strong> <br>
+<strong>Marquis:</strong> Resolvers, typedefs, authentication setup, server, models and front end queries/mutations. <br>
 github - https://github.com/MarquisWillis
 
-<strong>Adrian:</strong>Cart, resolvers<br>
+<strong>Adrian:</strong>Resolvers???<br>
 github - https://github.com/afirmalan
 
-<strong>Mariah:</strong> Store and Single Game page, app.js, readme <br>
+<strong>Mariah:</strong> Store and single game pages, gameSeeds.json, seed.js and readme <br>
 github - https://github.com/Mariah217
-
 
 ## License
 
