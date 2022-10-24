@@ -11,10 +11,10 @@ import {
 export default function Nav({ currentPage, handlePageChange }) {
   const [openNav, setOpenNav] = useState(false);
 
-  const [isShown, setIsShown] = useState(false)
-  const handleClick = event => {
-    setIsShown(current => !current);
-  }
+  // const [isShown, setIsShown] = useState(false)
+  // // // const handleClick = event => {
+  // //   // setIsShown(current => !current);
+  // // }
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -30,7 +30,7 @@ export default function Nav({ currentPage, handlePageChange }) {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-4 font-normal"
       > 
        <a href="#store"
         onClick={() => handlePageChange('Store')}
@@ -66,8 +66,19 @@ export default function Nav({ currentPage, handlePageChange }) {
         as="li"
         variant="small"
         color="blue-gray"
+        className="p-1 font-extrabold "
+      >
+      </Typography>
+      <Typography
+        as='btn'
+        variant='small'
+        color="blue-gray"
         className="p-1 font-normal"
       >
+        <Button onClick={() => handlePageChange('Cart')}>
+          Cart
+        </Button>
+
       </Typography>
     </ul>
     
@@ -79,9 +90,10 @@ export default function Nav({ currentPage, handlePageChange }) {
       
         <Typography
           as="a"
-          href="#"
+          href="#store"
           variant="small"
           className="mr-4 cursor-pointer py-1.5 font-normal"
+          onClick={() => handlePageChange('Store')}
         >
           <span>Throne of Games</span>
         </Typography>
@@ -124,12 +136,12 @@ export default function Nav({ currentPage, handlePageChange }) {
               />
             </svg>
           )}
-        </IconButton>
+          </IconButton>
       </div>
       <MobileNav open={openNav}>
         {navList}
-        <Button onClick={() => handlePageChange('Cart')}>
-          Cart
+        <Button variant="gradient" size="sm" fullWidth className="mb-2">
+          <span>Buy Now</span>
         </Button>
       </MobileNav>
     </Navbar>

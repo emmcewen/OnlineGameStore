@@ -2,8 +2,29 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const CartList = ({ game =[] }) =>
-{}
+const game = [
+  {
+    id: 1,
+    title: 'Title1',
+    href: '#',
+    genre: 'genre1',
+    price: '$60.00',
+    quantity: 1,
+    imageSrc: 'link to img src1',
+    imageAlt: 'Game description 1',
+  },
+  {
+    id: 2,
+    title: 'Title2',
+    href: '#',
+    genre2: 'genre2',
+    price: '$60.00',
+    quantity: 1,
+    imageSrc: 'link to img src 2',
+    imageAlt: 'Game description 2',
+  },
+  
+]
 
 export default function Cart() {
   const [open, setOpen] = useState(true)
@@ -129,4 +150,5 @@ export default function Cart() {
       </Dialog>
     </Transition.Root>
   )
-}
+};
+

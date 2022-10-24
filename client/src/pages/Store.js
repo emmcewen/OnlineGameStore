@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import '../styles/style.css';
+import AddCartBtn from '../components/AddCartBtn';
 
  
 export default function Store({ setCurrentPage, setCurrentGame }) {
@@ -16,13 +17,18 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
   console.log (data)
   const game = data?.allGames || [];
   console.log (game)
-  //if loading then..
+  
+  if(loading) {
+    return <h1>LOADING...</h1>
+  }
+
   return (
     <>
-      <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'>
+      <div className='grid md:grid-cols-2 xl:grid-cols-3 content-center content-evenly'>
         {game.map((game) => {
           return (
-            <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer" id='card1'
+            
+            <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer container" id='card1'
               onClick={() => {
                 setCurrentPage("SingleGame");
                 setCurrentGame(game);
@@ -39,7 +45,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
                   {game.title}
                 </Typography>
                 <Typography>
-                  {game.description}
+                  {game.summary}
                   <br />
                   <br />
                   <br />
@@ -47,7 +53,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
               </CardBody>
               <CardFooter divider className="flex items-center justify-between py-3">
                 <Typography variant="small">${game.price}</Typography>
-                {/* <AddCartBtn /> */}
+                <AddCartBtn game={game}/>
               </CardFooter>
             </Card>
           )
