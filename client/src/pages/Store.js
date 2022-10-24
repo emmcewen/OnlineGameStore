@@ -24,15 +24,14 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
       <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'>
         {game.map((game) => {
           return (
-            <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer" id='card1'
+            <Card className="w-96 mt-15 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer" id='card'
               onClick={() => {
                 setCurrentPage("SingleGame");
                 setCurrentGame(game);
               }}>
               <CardHeader className="relative h-56">
-                <img
-                  src={game.cardimage}
-                  alt="img-blur-shadow"
+                <img class='image'
+                  src={game.image}
                   className="h-full w-full"
                 />
               </CardHeader>
@@ -42,9 +41,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
                 </Typography>
                 <Typography>
                   {game.summary}
-                  <br />
-                  <br />
-                  <br />
+                
                 </Typography>
               </CardBody>
               <CardFooter divider className="flex items-center justify-between py-3">
