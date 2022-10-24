@@ -28,7 +28,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
         {game.map((game) => {
           return (
             
-            <Card className="w-96 mt-80 mb-20 ml-14 bg-blue bg-opacity-60 text-grey cursor-pointer container" id='card1'
+            <Card className="w-96 mt-20 ml-20 bg-blue bg-opacity-60 text-grey cursor-pointer container" id='card1'
               onClick={() => {
                 setCurrentPage("SingleGame");
                 setCurrentGame(game);
@@ -46,9 +46,6 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
                 </Typography>
                 <Typography>
                   {game.summary}
-                  <br />
-                  <br />
-                  <br />
                 </Typography>
               </CardBody>
               <CardFooter divider className="flex items-center justify-between py-3">
