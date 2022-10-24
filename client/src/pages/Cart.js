@@ -14,25 +14,29 @@ import {
 // import { ADD_TO_CART } from '../utils/mutations';
 // import { REMOVE_FROM_CART } from '../utils/mutations';
 
-const game =
-[
-    {
-        id: 1,
-        title: 'Title1',
-        price: '$60.00',
-        quantity: 1,
-        image: 'link to img src1',
-        imageAlt: 'Game description 1',
-    },
-    {
-        id: 2,
-        title: 'Title2',
-        price: '$60.00',
-        quantity: 1,
-        image: 'link to img src 2',
-       
-    },
-];
+const game = [
+  {
+    id: 1,
+    title: 'Title1',
+    href: '#',
+    genre: 'genre1',
+    price: '$60.00',
+    quantity: 1,
+    imageSrc: 'link to img src1',
+    imageAlt: 'Game description 1',
+  },
+  {
+    id: 2,
+    title: 'Title2',
+    href: '#',
+    genre2: 'genre2',
+    price: '$60.00',
+    quantity: 1,
+    imageSrc: 'link to img src 2',
+    imageAlt: 'Game description 2',
+  },
+
+]
 
 // const Cart = ({ game }) => {
 
