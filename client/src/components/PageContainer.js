@@ -6,8 +6,6 @@ import Login from '../pages/Login';
 import Signup from '../pages/Signup'
 import SingleGame from '../pages/SingleGame'
 
-
-
 export default function PageContainer() {
   const [currentPage, setCurrentPage] = useState('Store');
   const [currentGame, setCurrentGame] = useState('');
