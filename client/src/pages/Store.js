@@ -19,7 +19,7 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
   console.log (game)
   
   if(loading) {
-    return <h1>LOADING...</h1>
+    return <h1 className='text-white'>LOADING...</h1>
   }
 
   return (
