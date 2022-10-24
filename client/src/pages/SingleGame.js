@@ -6,9 +6,9 @@ import {
   Typography,
 } from '@material-tailwind/react'
 
-export default function SingleGame({currentGame: game}) {
+export default function SingleGame({currentGame: {game}}) {
   return (
-    <>
+    <div className='container'>
       Single Game
       <img class="mx-auto"
         src={game.image}
@@ -35,6 +35,6 @@ export default function SingleGame({currentGame: game}) {
           </CardFooter>
         </Card>
       </div>
-    </>
+    </div>
   )
 }
