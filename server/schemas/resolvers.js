@@ -67,12 +67,12 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
     removeFromCart: async (parent, { gameId }, context) => {
- 
+
       console.log(context.user._id, gameId);
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { cart:  {gameId: Types.ObjectId(gameId)}  } },
+          { $pull: { cart: { gameId: Types.ObjectId(gameId) } } },
           { new: true, runValidators: true }
         );
 
@@ -81,8 +81,29 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+    checkout: async (parent, args, context) => {
+      const url = new URL(context.headers.referer).origin;
+      const order = new Order({ products: args.products });
+      const line_items = [];
 
+      const { CartItem } = await order.populate('products');
+
+      for (let i = 0; i < products.length; i++) {
+        const product = await stripe.products.create({
+          name: products[i].name,
+          description: products[i].description,
+          images: [`${url}/images/${products[i].image}`]
+        });
+
+        line_items.push({
+          price: price.id,
+          quantity: 1
+        });
+      }
+      return { session: session.id };
+    },
     // Send game element to checkout and populate checkout
+
   },
 };
 // export module

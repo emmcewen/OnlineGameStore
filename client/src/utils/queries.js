@@ -46,3 +46,11 @@ export const QUERY_ALL_GAMES = gql`
     }
   }
 `;
+
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($game: [ID]!) {
+    checkout(cart: $game) {
+      session
+    }
+  }
+`;

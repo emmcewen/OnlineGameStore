@@ -32,6 +32,10 @@ const typeDefs = gql`
         user: User
     }
 
+    type Checkout {
+        session: ID
+      }
+
     type Query {
         # query game id 
         # query user
@@ -39,6 +43,7 @@ const typeDefs = gql`
         user: User
         allGames: [Game]
         game(gameId: ID!): Game
+        checkout(game: [ID]!): Checkout
     }
 
     input CartInput {
