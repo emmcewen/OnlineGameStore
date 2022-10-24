@@ -1,124 +1,133 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import React, { useEffect } from 'react';
+import {
+    Card,
+    CardBody,
+    CardFooter,
+    Typography,
+    Button
+} from '@material-tailwind/react';
+import { useLazyQuery } from '@apollo/client';
+import { QUERY_CHECKOUT } from '../utils/queries';
+import Auth from '../utils/auth';
+import { useStoreContext } from '../utils/GlobalState';
+import { idbPromise } from '../utils/helpers';
+import { ADD_TO_CART } from '../utils/mutations';
+import { REMOVE_FROM_CART } from '../utils/mutations';
 
-const game = [
-  {
-    id: 1,
-    title: 'Title1',
-    href: '#',
-    genre: 'genre1',
-    price: '$60.00',
-    quantity: 1,
-    imageSrc: 'link to img src1',
-    imageAlt: 'Game description 1',
-  },
-  {
-    id: 2,
-    title: 'Title2',
-    href: '#',
-    genre2: 'genre2',
-    price: '$60.00',
-    quantity: 1,
-    imageSrc: 'link to img src 2',
-    imageAlt: 'Game description 2',
-  },
-  
-]
+const game = ({ game })
+// [
+//     {
+//         id: 1,
+//         title: 'Title1',
+//         price: '$60.00',
+//         quantity: 1,
+//         image: 'link to img src1',
+//         imageAlt: 'Game description 1',
+//     },
+//     {
+//         id: 2,
+//         title: 'Title2',
+//         price: '$60.00',
+//         quantity: 1,
+//         image: 'link to img src 2',
+//         imageAlt: 'Game desc 2',
+//     },
+// ];
 
-export default function Cart() {
-  const [open, setOpen] = useState(true)
+const Cart = ({ item }) => {
 
-  return (
-   <Dialog>
-                <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                  <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                    <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
-                      <div className="flex items-start justify-between">
-                        <Dialog.Title className="text-lg font-medium text-gray-900">Shopping cart</Dialog.Title>
-                        <div className="ml-3 flex h-7 items-center">
-                          <button
-                            type="button"
-                            className="-m-2 p-2 text-gray-400 hover:text-gray-500"
-                            onClick={() => setOpen(false)}
-                          >
-                            <span className="sr-only">Close panel</span>
-                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                          </button>
-                        </div>
-                      </div>
+    const [, dispatch] = useStoreContext();
 
-                      <div className="mt-8">
-                        <div className="flow-root">
-                          <ul role="list" className="-my-6 divide-y divide-gray-200">
-                            {game.map((game) => (
-                              <li key={game.gameId} className="flex py-6">
-                                <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                                  <img
-                                    src={game.image}
-                                    className="h-full w-full object-cover object-center"
-                                  />
-                                </div>
+    const removeFromCart = item => {
+        dispatch({
+            type: REMOVE_FROM_CART,
+            _id: item._id
+        });
+        idbPromise('cart', 'delete', { ...item });
 
-                                <div className="ml-4 flex flex-1 flex-col">
-                                  <div>
-                                    <div className="flex justify-between text-base font-medium text-gray-900">
-                                      <h3>
-                                        {game.name}
-                                      </h3>
-                                      <p className="ml-4">{game.price}</p>
-                                    </div>
-                                  </div>
-                                  <div className="flex flex-1 items-end justify-between text-sm">
+    };
+    const AddToCart = (e) => {
+        const value = e.target.value;
+        dispatch({
+            type: ADD_TO_CART,
+            _id: item._id,
+            purchaseQuantity: parseInt(value)
+        });
+        idbPromise('cart', 'put', { ...item, purchaseQuantity: parseInt(value) });
 
-                                    <div className="flex">
-                                      <button
-                                        type="button"
-                                        className="font-medium text-indigo-600 hover:text-indigo-500"
-                                      >
-                                        Remove
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+    }
 
-                    <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
-                      <div className="flex justify-between text-base font-medium text-gray-900">
-                        <p>Subtotal</p>
-                        <p>$0.00</p>
-                      </div>
-                      <p className="mt-0.5 text-sm text-gray-500"></p>
-                      <div className="mt-6">
-                        <a
-                          href="#"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                        >
-                          Checkout
-                        </a>
-                      </div>
-                      <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-                        <p>
-                          or
-                          <button
-                            type="button"
-                            className="font-medium text-indigo-600 hover:text-indigo-500"
-                            onClick={() => setOpen(false)}
-                          >
-                            Continue Shopping
-                            <span aria-hidden="true"> &rarr;</span>
-                          </button>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Dialog.Panel>
-    </Dialog>          
-  )
-};
 
+    function calculateTotal() {
+        let sum = 0;
+        Cart.forEach((item) => {
+            sum += item.price * item.purchaseQuantity;
+        });
+        return sum.toFixed(2);
+    };
+
+
+
+
+    function Cart() {
+        //    const Query CartItems
+        const [state, dispatch] = useStoreContext();
+        const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+
+        useEffect(() => {
+            async function getCart() {
+              const cart = await idbPromise('cart', 'get');
+              dispatch({ type: ADD_TO_CART, products: [...cart] });
+            }
+        
+            if (!state.cart.length) {
+              getCart();
+            }
+          }, [state.cart.length, dispatch]);
+
+
+        return (
+            <>
+
+                <div class='card'>
+                    <Card className="h-100 bg-black bg-opacity-90 text-grey">
+                        <CardBody className="text-center">
+                            <Typography variant="h5" className="mb-2">
+                                Cart
+                            </Typography>
+                            <CardFooter divider className="flex items-center justify-between py-3"></CardFooter>
+                            {/* <img class="mx-auto"
+                            src={game.img}
+                            className='h-auto w-1/3 mt-40'
+                        /> */}
+                            <div>
+                                <Typography>
+                                    {game.title} <br />
+                                </Typography>
+                                <Typography>
+                                    $ {game.price}
+                                </Typography>
+                                <span
+                                    role="img"
+                                    aria-label="trash"
+                                    onClick={() => removeFromCart(item)}
+                                >
+                                    🗑️
+                                </span>
+                            </div>
+                        </CardBody>
+                        <CardFooter divider className="flex items-center justify-between py-3">
+                            <Typography variant="small">Total: ${calculateTotal()}
+                            </Typography>
+                            <Button variant="small" color="gray" className="flex gap-1">
+                                <i className="fas fa-map-marker-alt fa-sm mt-[3px]" />
+                                Checkout
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                </div>
+            </>
+        )
+    }
+}
+ export default Cart;
