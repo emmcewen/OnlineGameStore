@@ -5,24 +5,22 @@ import {
   CardFooter,
   Typography,
 } from '@material-tailwind/react'
+import { useQuery } from "@apollo/client";
 import { QUERY_SINGLE_GAME } from '../utils/queries';
 import AddCartBtn from '../components/AddCartBtn'
-import { useQuery } from '@apollo/client';
 
 export default function SingleGame() {
   const { data, loading } = useQuery(QUERY_SINGLE_GAME, {
-    variables: game 
+    variables: game
   })
-  const game = data 
+  const game = data
   return (
     <>
-    <div class='flex items-center justify-center'>
       <img class="mx-auto"
         src={game.image}
         alt = ""
         className='h-1/3 w-1/3 mt-40'
       />
-     
       <div class='card'>
         <Card className="h-auto bg-blue bg-opacity-60 text-grey">
           <CardBody className="text-center">
@@ -44,7 +42,6 @@ export default function SingleGame() {
           </CardFooter>
         </Card>
         </div>
-      </div>
     </>
   )
 }
