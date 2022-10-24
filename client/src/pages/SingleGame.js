@@ -6,7 +6,7 @@ import {
   Typography,
 } from '@material-tailwind/react'
 
-export default function SingleGame({currentGame: game}) {
+export default function SingleGame({currentGame: {game}}) {
   return (
     <div className='container'>
       Single Game

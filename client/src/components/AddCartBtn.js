@@ -8,7 +8,7 @@ export default function AddCartButton({game}) {
 
     // const game = data.?game
 
-    async function handleAddToCart() {
+    async function handleAddToCart(game) {
         try {
 
             const {data, error} = await addToCart({
@@ -30,7 +30,7 @@ export default function AddCartButton({game}) {
     return (
         <div className='addtocart'>
             <button className='addtocartbtn mr-20 text-grey' 
-            onClick={()=>handleAddToCart()}
+            onClick={()=>handleAddToCart(game)}
             >Add to cart</button>
         </div>
     )
