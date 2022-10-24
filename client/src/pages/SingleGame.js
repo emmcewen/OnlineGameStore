@@ -5,9 +5,10 @@ import {
   CardFooter,
   Typography,
 } from '@material-tailwind/react'
-export default function SingleGame({ currentGame: game }) {
+
+export default function SingleGame({currentGame: {game}}) {
   return (
-    <>
+    <div className='container'>
       Single Game
       <div class="flex items-center justify-center">
         <img class="mx-auto"
@@ -38,6 +39,6 @@ export default function SingleGame({ currentGame: game }) {
           </Card>
         </div>
       </div>
-    </>
+    </div>
   )
 }

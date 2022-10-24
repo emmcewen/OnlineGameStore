@@ -64,6 +64,17 @@ export default function Nav({ currentPage, handlePageChange }) {
         className="p-1 font-normal"
       >
       </Typography>
+      <Typography
+        as='btn'
+        variant='small'
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Button onClick={() => handlePageChange('Cart')}>
+          Cart
+        </Button>
+
+      </Typography>
     </ul>
   );
   return (
@@ -120,9 +131,7 @@ export default function Nav({ currentPage, handlePageChange }) {
       </div>
       <MobileNav open={openNav}>
         {navList}
-        <Button onClick={() => handlePageChange('Cart')}>
-          Cart
-        </Button>
+        
       </MobileNav>
     </Navbar>
   );
