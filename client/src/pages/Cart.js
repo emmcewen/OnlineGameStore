@@ -1,7 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-
 const products = [
   {
     id: 1,
@@ -26,10 +25,8 @@ const products = [
   },
   // More products...
 ]
-
 export default function Cart() {
   const [open, setOpen] = useState(true)
-
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -44,7 +41,6 @@ export default function Cart() {
         >
           <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
         </Transition.Child>
-
         <div className="fixed inset-0 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
@@ -73,7 +69,6 @@ export default function Cart() {
                           </button>
                         </div>
                       </div>
-
                       <div className="mt-8">
                         <div className="flow-root">
                           <ul role="list" className="-my-6 divide-y divide-gray-200">
@@ -86,7 +81,6 @@ export default function Cart() {
                                     className="h-full w-full object-cover object-center"
                                   />
                                 </div>
-
                                 <div className="ml-4 flex flex-1 flex-col">
                                   <div>
                                     <div className="flex justify-between text-base font-medium text-gray-900">
@@ -99,7 +93,6 @@ export default function Cart() {
                                   </div>
                                   <div className="flex flex-1 items-end justify-between text-sm">
                                     <p className="text-gray-500">Qty {product.quantity}</p>
-
                                     <div className="flex">
                                       <button
                                         type="button"
@@ -116,7 +109,6 @@ export default function Cart() {
                         </div>
                       </div>
                     </div>
-
                     <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Subtotal</p>

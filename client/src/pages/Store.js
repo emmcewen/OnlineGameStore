@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import '../styles/style.css';
- 
+
 export default function Store({ setCurrentPage, setCurrentGame }) {
   const { data, loading } = useQuery(QUERY_ALL_GAMES)
   console.log (data)
@@ -41,7 +41,6 @@ export default function Store({ setCurrentPage, setCurrentGame }) {
                 </Typography>
                 <Typography>
                   {game.summary}
-                
                 </Typography>
               </CardBody>
               <CardFooter divider className="flex items-center justify-between py-3">

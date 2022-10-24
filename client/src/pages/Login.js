@@ -3,31 +3,24 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import { LockClosedIcon } from '@heroicons/react/20/solid'
-
 const Login = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [login, { error }] = useMutation(LOGIN_USER);
   const [showAlert, setShowAlert] = useState(false);
-
-
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const { data } = await login({ variables: userFormData });
-
       Auth.login(data.login.token);
     } catch (err) {
       console.error(err);
       setShowAlert(true);
     }
-
     setUserFormData({
       email: '',
       password: '',
@@ -37,7 +30,7 @@ const Login = () => {
   <>
     <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
-        <div>   
+        <div>
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
             Log in to your account
           </h2>
