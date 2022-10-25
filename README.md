@@ -2,7 +2,7 @@
 
 ## Description
 
-Throne of Games is an online e-commerce website where you can purchase games to play. 
+Throne of Games is an e-commerce online game store that has a variety of games for download. The store provides free and reasonably priced games to download and play on your preferred devices. Throne of Games provides the top trending games and a variety of older games for the best price on the internet.
 
 ## Table of Contents (Optional)
 
@@ -28,11 +28,12 @@ Throne of Games is an online e-commerce website where you can purchase games to 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-![throne of games homepage](/images/ScreenShot.PNG)
+<a href ="https://game-store-em.herokuapp.com/"> Click for live link </a> <br><br>
+![throne of games homepage](/images/ScreenShot.PNG)<br>
+![throne of games homepage](/images/screenshot4.PNG)<br>
+![throne of games homepage](/images/screenshot3.PNG)<br>
+![throne of games homepage](/images/cartscreenshot.PNG)<br>
 
 
 ## Credits
@@ -75,6 +76,6 @@ SOFTWARE.
 
 ## Badges
 
-![badmath](https://img.shields.io/static/v1?label=JavaScript&message=72%&color=yellow)<br>
-![badmath](https://img.shields.io/static/v1?label=HTML&message=23%&color=orange)<br>
-![badmath](https://img.shields.io/static/v1?label=CSS&message=4%&color=purple)<br>
+![badmath](https://img.shields.io/static/v1?label=JavaScript&message=94%&color=yellow)<br>
+![badmath](https://img.shields.io/static/v1?label=HTML&message=5%&color=orange)<br>
+![badmath](https://img.shields.io/static/v1?label=CSS&message=1%&color=purple)<br> 
