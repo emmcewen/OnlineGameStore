@@ -2,7 +2,7 @@
 
 ## Description
 
-Throne of Games is an online e-commerce website where you can purchase games to play. 
+Throne of Games is an e-commerce online game store that has a variety of games for download. The store provides free and reasonably priced games to download and play on your preferred devices. Throne of Games provides the top trending games and a variety of older games for the best price on the internet.
 
 ## Table of Contents (Optional)
 
