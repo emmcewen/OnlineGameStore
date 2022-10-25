@@ -78,4 +78,4 @@ SOFTWARE.
 
 ![badmath](https://img.shields.io/static/v1?label=JavaScript&message=94%&color=yellow)<br>
 ![badmath](https://img.shields.io/static/v1?label=HTML&message=5%&color=orange)<br>
-![badmath](https://img.shields.io/static/v1?label=CSS&message=1%&color=purple)<br>
+![badmath](https://img.shields.io/static/v1?label=CSS&message=1%&color=purple)<br> 
