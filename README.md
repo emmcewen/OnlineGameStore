@@ -1,7 +1,8 @@
 # Throne of Games
 
 ## Description
-Throne of Games is an online e-commerce website where you can purchase games to play.
+
+Throne of Games is an e-commerce online game store that has a variety of games for download. The store provides free and reasonably priced games to download and play on your preferred devices. Throne of Games provides the top trending games and a variety of older games for the best price on the internet.
 
 ## Table of Contents (Optional)
 - [Installation](#installation)
@@ -19,6 +20,8 @@ Throne of Games is an online e-commerce website where you can purchase games to 
 -Authentication (JWT)
 
 ## Usage
+
+
 <a href ="https://game-store-em.herokuapp.com/"> Click for live link </a> <br><br>
 ![throne of games homepage](/images/ScreenShot.PNG)<br>
 ![throne of games homepage](/images/screenshot4.PNG)<br>
@@ -55,6 +58,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Badges
+
 ![badmath](https://img.shields.io/static/v1?label=JavaScript&message=94%&color=yellow)<br>
 ![badmath](https://img.shields.io/static/v1?label=HTML&message=5%&color=orange)<br>
-![badmath](https://img.shields.io/static/v1?label=CSS&message=1%&color=purple)<br>
+![badmath](https://img.shields.io/static/v1?label=CSS&message=1%&color=purple)<br> 
